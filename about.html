@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Stackly Hospitals</title>
+    <!-- Importing a professional, modern font (Inter) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Using Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Linking the external CSS file -->
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <!-- Logo and Brand -->
+        <a href="./index.html" class="brand">
+          <div class="brand-logo"></div>
+          <img src="./assets/logo.webp" alt="" />
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links">
+          <!-- HOME (With Dropdown) -->
+          <li class="has-dropdown">
+            <!-- Added dropdown indicator icon -->
+            <a href="./index.html" class="nav-link" data-id="home-link">
+              HOME
+              <i class="fas fa-chevron-down nav-dropdown-icon"></i>
+            </a>
+            <ul class="dropdown" data-dropdown-id="home">
+              <li><a href="./home2.html">HOME2</a></li>
+            </ul>
+          </li>
+          <!-- SPECIALITIES (With Dropdown) -->
+          <li class="has-dropdown">
+            <!-- Added dropdown indicator icon -->
+            <a href="./spect.html" class="nav-link" data-id="specialities-link">
+              SPECIALITIES
+              <i class="fas fa-chevron-down nav-dropdown-icon"></i>
+            </a>
+            <ul class="dropdown" data-dropdown-id="specialities">
+              <li><a href="./card.html"> Cardiology</a></li>
+              <li><a href="./neu.html"> Neurology</a></li>
+              <li><a href="./orth.html"> Orthopedics</a></li>
+              <li><a href="./onco.html"> Oncology</a></li>
+            </ul>
+          </li>
+          <!-- Simple Links -->
+          <li><a href="./about.html" class="nav-link">ABOUT</a></li>
+          <li><a href="./blog.html" class="nav-link">BLOG</a></li>
+          <li><a href="./dash.html" class="nav-link">DASHBOARD</a></li>
+          <li><a href="./contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
+
+        <!-- Desktop Login Button -->
+        <div class="nav-actions">
+          <a href="./login.html"><button class="login-btn">LOGIN</button></a>
+        </div>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <i class="fas fa-bars" id="menu-icon"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Full-Screen Menu -->
+    <ul class="mobile-nav-menu" id="mobile-menu">
+      <!-- HOME (With Dropdown) -->
+      <li>
+        <div class="mobile-dropdown-container">
+          <a href="./index.html" class="nav-link">HOME</a>
+          <button
+            class="mobile-dropdown-toggle"
+            data-target="mobile-home-dropdown"
+            aria-expanded="false"
+          >
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <ul class="mobile-dropdown" id="mobile-home-dropdown">
+          <li><a href="./home2.html">HOME2</a></li>
+        </ul>
+      </li>
+      <!-- SPECIALITIES (With Dropdown) -->
+      <li>
+        <div class="mobile-dropdown-container">
+          <a href="./spect.html" class="nav-link">SPECIALITIES</a>
+          <button
+            class="mobile-dropdown-toggle"
+            data-target="mobile-specialities-dropdown"
+            aria-expanded="false"
+          >
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <ul class="mobile-dropdown" id="mobile-specialities-dropdown">
+          <li><a href="./card.html"> Cardiology</a></li>
+          <li><a href="./neu.html"> Neurology</a></li>
+          <li><a href="./orth.html"> Orthopedics</a></li>
+          <li><a href="./onco.html">Oncology</a></li>
+        </ul>
+      </li>
+      <!-- Simple Links -->
+      <li><a href="./about.html" class="nav-link">ABOUT</a></li>
+      <li><a href="./blog.html" class="nav-link">BLOG</a></li>
+      <li><a href="./dash.html" class="nav-link">DASHBOARD</a></li>
+      <li><a href="./contact.html" class="nav-link">CONTACT</a></li>
+
+      <!-- Mobile Login Button -->
+      <div class="login-btn-mobile">
+        <a href="./login.html"
+          ><button class="login-btn" style="width: 100%">LOGIN</button></a
+        >
+      </div>
+    </ul>
+    <!-- FLOATING BLURRED BLOB BACKGROUND CONTAINER -->
+    <div class="blob-bg">
+      <span class="blob"></span>
+      <span class="blob"></span>
+      <span class="blob"></span>
+      <span class="blob"></span>
+    </div>
+
+    <div class="container">
+      <header
+        class="animated-section"
+        style="text-align: center; margin-bottom: 3rem"
+      >
+        <h1>Our Journey: Healing, Innovating, Leading</h1>
+        <p
+          style="
+            color: rgba(224, 247, 250, 0.8);
+            max-width: 800px;
+            margin: 0 auto;
+          "
+        >
+          Stackly Hospitals is dedicated to integrating cutting-edge technology
+          with compassionate, patient-centered care. Discover how we became a
+          global leader in healthcare innovation.
+        </p>
+      </header>
+
+      <!-- 1. Hospital History Section -->
+      <section class="animated-section" id="history">
+        <h2>The Stackly Hospitals Story</h2>
+        <div class="history-section">
+          <div class="history-grid">
+            <div class="history-text">
+              <h3>1985: A Vision for Integrated Care</h3>
+              <p>
+                Stackly Hospitals was founded in 1985 by Dr. Evelyn Reed with
+                the vision of creating a medical center where technology and
+                human touch coexist seamlessly. Starting as a small research
+                clinic focused on early computerized diagnostics, our mission
+                quickly expanded.
+              </p>
+              <h3>2005: Global Expansion & Digital Transformation</h3>
+              <p>
+                The early 2000s marked a pivotal era. We pioneered the "Stackly
+                Digital Patient Record," making us one of the first hospital
+                systems to fully digitize patient data. This foundation allowed
+                us to scale, opening our first international centers in London
+                and Bangalore.
+              </p>
+              <h3>Today: The Future of Medicine</h3>
+              <p>
+                We continue to lead, integrating Generative AI for diagnostics
+                and advanced robotics for surgery. Our focus remains on
+                delivering the highest quality care while advancing medical
+                science worldwide.
+              </p>
+            </div>
+            <div>
+              <img
+                src="./assets/about.webp"
+                alt="Historical image of the Stackly Hospitals founding clinic"
+                class="history-img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Growth / Milestones Section -->
+      <section class="animated-section" id="milestones">
+        <h2>Our Impact and Growth</h2>
+        <div class="milestones-grid">
+          <!-- Milestone Card 1 -->
+          <div class="milestone-card">
+            <i class="fas fa-user-friends"></i>
+            <span class="counter-value" data-target="2500000">0</span>+
+            <span class="counter-label">Patients Treated Annually</span>
+          </div>
+
+          <!-- Milestone Card 2 -->
+          <div class="milestone-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <span class="counter-value" data-target="14">0</span>
+            <span class="counter-label">Global Research Centers</span>
+          </div>
+
+          <!-- Milestone Card 3 -->
+          <div class="milestone-card">
+            <i class="fas fa-robot"></i>
+            <span class="counter-value" data-target="98">0</span>%
+            <span class="counter-label">Surgical Robotics Success Rate</span>
+          </div>
+
+          <!-- Milestone Card 4 -->
+          <div class="milestone-card">
+            <i class="fas fa-hand-holding-usd"></i>
+            <span class="counter-value" data-target="150">0</span>M+
+            <span class="counter-label">Research Funding Secured</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Achievements / Awards Section -->
+      <section class="animated-section" id="awards">
+        <h2>Recognitions and Excellence</h2>
+        <div class="awards-grid">
+          <!-- Award Card 1 -->
+          <article class="award-card">
+            <i class="fas fa-award"></i>
+            <h4>Top 10 Global Innovators</h4>
+            <p>
+              Recognized for five consecutive years (2020-2025) in Healthcare
+              Technology.
+            </p>
+          </article>
+
+          <!-- Award Card 2 -->
+          <article class="award-card">
+            <i class="fas fa-brain"></i>
+            <h4>AI Diagnostics Pioneer</h4>
+            <p>
+              Awarded for ethical deployment and superior accuracy of Generative
+              AI models.
+            </p>
+          </article>
+
+          <!-- Award Card 3 -->
+          <article class="award-card">
+            <i class="fas fa-medal"></i>
+            <h4>Patient Safety Platinum</h4>
+            <p>
+              Highest rating for clinical safety and low infection rates across
+              all facilities.
+            </p>
+          </article>
+
+          <!-- Award Card 4 -->
+          <article class="award-card">
+            <i class="fas fa-heart"></i>
+            <h4>Community Compassion Prize</h4>
+            <p>
+              Acknowledged for outstanding public health outreach and wellness
+              programs.
+            </p>
+          </article>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- 1. Logo & Branding -->
+        <div class="footer-section branding">
+          <a href="./index.html" class="brand-footer">
+            <img src="./assets/logo.webp" alt="" />
+          </a>
+          <p class="brand-tagline">
+            Pioneering healthcare through innovation and compassion, delivering
+            tomorrow's patient care, today.
+          </p>
+          <div class="social-icons">
+            <a href="./404.html" class="social-icon" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- 2. Quick Links -->
+        <div class="footer-section quick-links">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./spect.html">SPECIALITIES</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./blog.html">BLOG</a></li>
+            <li><a href="./dash.html">DASHBOARD</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Address Section -->
+        <div class="footer-section footer-address">
+          <h4>Contact & Address</h4>
+          <p>
+            <i class="fas fa-location-dot"></i>
+            Level 10, Innovation Tower, Cyber City, Stacklyville 90210
+          </p>
+          <p>
+            <i class="fas fa-phone"></i>
+            (800) 555-0199
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i>
+            info@stacklyhospitals.com
+          </p>
+        </div>
+
+        <!-- 4. Newsletter Subscription -->
+        <div class="footer-section newsletter">
+          <h4>Stay Updated</h4>
+          <p>
+            Subscribe to our newsletter for the latest healthcare news and
+            research breakthroughs.
+          </p>
+          <form class="newsletter-form" action="./404.html">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              required
+              class="newsletter-input"
+              id="newsletter-email"
+            />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; <span id="current-year"></span> Stackly HOSPITALS. All rights
+        reserved. | Privacy Policy | Terms of Service
+      </div>
+    </footer>
+    <script src="./nav.js"></script>
+    <script src="./footer.js"></script>
+    <script>
+      /*
+        --------------------------------------------------------
+        JAVASCRIPT LOGIC
+        --------------------------------------------------------
+        Handles section slide-in on scroll and animated counters.
+        */
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll(".animated-section");
+        const counterValues = document.querySelectorAll(".counter-value");
+        let countersAnimated = false;
+
+        // --- 1. Counter Animation Function ---
+        const animateCounter = (el) => {
+          const target = parseInt(el.getAttribute("data-target"));
+          const duration = 2000; // 2 seconds
+          let startTimestamp = null;
+          const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min(
+              (timestamp - startTimestamp) / duration,
+              1
+            );
+            const currentValue = Math.floor(progress * target);
+            el.textContent = currentValue.toLocaleString();
+
+            if (progress < 1) {
+              window.requestAnimationFrame(step);
+            } else {
+              el.textContent = target.toLocaleString(); // Ensure final value is exact
+            }
+          };
+          window.requestAnimationFrame(step);
+        };
+
+        // --- 2. Intersection Observer for Slide-in & Counters ---
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+
+                // Trigger counters only once when the milestones section is visible
+                if (entry.target.id === "milestones" && !countersAnimated) {
+                  counterValues.forEach(animateCounter);
+                  countersAnimated = true;
+                }
+
+                // Stop observing visible sections
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            // Trigger animation when 20% of the element is visible
+            threshold: 0.2,
+          }
+        );
+
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+      });
+    </script>
+  </body>
+</html>

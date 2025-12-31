@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STACKLY - About Our Mission</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./about2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Inter Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header / Fixed Navbar -->
+    <header class="header">
+      <a href="./home2.html" class="logo-link">
+        <div class="logo-img"><img src="./file/logo.webp" alt="" /></div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links-desktop" aria-label="Main Navigation Desktop">
+        <ul class="nav-list-desktop">
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./home2.html" class="nav-link-desktop">HOME</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./index.html">HOME1</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./service.html" class="nav-link-desktop">SERVICES</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./faq.html" class="nav-link-desktop">FAQs</a>
+          </li>
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./about2.html" class="nav-link-desktop">ABOUT</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./about2.html">About US</a></li>
+              <li><a href="./career.html">CAREERS</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./blog2.html" class="nav-link-desktop">BLOG</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./contact2.html" class="nav-link-desktop">CONTACT</a>
+          </li>
+          <li class="nav-item-desktop shop-btn-desktop">
+            <a href="./shop.html" class="shop-btn-link">SHOP</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button
+        class="menu-toggle"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Toggle Navigation"
+      >
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </button>
+    </header>
+
+    <!-- Mobile Slide-in Navigation -->
+    <nav id="mobile-menu" class="nav-mobile" aria-label="Mobile Navigation">
+      <ul class="nav-list-mobile">
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="home-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="home-dropdown"
+            href="./home2.html"
+          >
+            HOME
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="home-dropdown" class="dropdown-mobile">
+            <li><a href="./index.html">HOME1</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./service.html" class="nav-link-mobile">SERVICES</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./faq.html" class="nav-link-mobile">FAQs</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="about-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="about-dropdown"
+            href="./about2.html"
+          >
+            ABOUT
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="about-dropdown" class="dropdown-mobile">
+            <li><a href="./about2.html">About US</a></li>
+            <li><a href="./career.html">CAREERS</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./blog2.html" class="nav-link-mobile">BLOG</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./contact2.html" class="nav-link-mobile">CONTACT</a>
+        </li>
+        <li class="nav-item-mobile">
+          <a href="./shop.html" class="shop-btn-mobile">SHOP</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Overlay for closing the mobile menu -->
+    <div class="overlay"></div>
+    <!-- Header & Hero Section -->
+    <header id="hero" class="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 shadow-xl">
+      <div class="hero-shape shape-1"></div>
+      <div class="hero-shape shape-2"></div>
+      <div class="hero-shape shape-3"></div>
+      <div class="hero-shape shape-4"></div>
+
+      <div class="max-w-4xl mx-auto text-center relative z-10 reveal-item">
+        <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 tracking-tight">
+          About <span class="text-white">STACKLY</span>
+        </h1>
+        <p
+          class="text-lg sm:text-xl font-light mt-4 opacity-90 max-w-2xl mx-auto"
+        >
+          Innovating Specialty Medicine Delivery. Built on Trust, Driven by
+          Care.
+        </p>
+      </div>
+    </header>
+
+    <!-- About Our Company Section -->
+    <section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="reveal-item">
+            <h2
+              class="text-4xl sm:text-5xl font-extrabold mb-6"
+              style="color: blueviolet"
+            >
+              The
+              <span style="color: var(--text-highlight)">STACKLY</span> Story
+            </h2>
+            <p class="text-lg mb-4 text-gray-700">
+              STACKLY was founded by a team of logistics experts and pharmacists
+              who recognized a critical gap in the specialty medication supply
+              chain: reliability. Patients dealing with complex conditions like
+              cancer, MS, or severe cardiac issues need absolute assurance that
+              their temperature-sensitive and high-value drugs will arrive on
+              time and intact.
+            </p>
+            <p class="text-lg text-gray-700">
+              We built STACKLY to be the most secure link between the pharmacy
+              and the patient, utilizing advanced cold chain technology,
+              real-time monitoring, and dedicated last-mile couriers, ensuring
+              medication integrity is never compromised.
+            </p>
+          </div>
+
+          <div class="reveal-item">
+            <!-- Placeholder Image for Logistics/Tech -->
+            <img
+              src="./file/about.webp"
+              alt="Secure delivery logistics hub"
+              class="rounded-xl shadow-2xl w-full"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission and Vision Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Mission Card -->
+        <div class="mission-card reveal-item">
+          <h3
+            class="text-3xl font-extrabold mb-4"
+            style="color: var(--primary-color)"
+          >
+            Our Mission
+          </h3>
+          <p class="text-lg text-gray-600">
+            To deliver specialty medications with **unrivaled speed, security,
+            and integrity**, empowering patients and providers with confidence
+            in the pharmaceutical supply chain.
+          </p>
+          <p class="font-semibold mt-4" style="color: var(--secondary-color)">
+            — Reliability in every degree.
+          </p>
+        </div>
+
+        <!-- Vision Card -->
+        <div class="vision-card reveal-item">
+          <h3
+            class="text-3xl font-extrabold mb-4"
+            style="color: var(--text-highlight)"
+          >
+            Our Vision
+          </h3>
+          <p class="text-lg text-white opacity-95">
+            To be the global benchmark for specialty pharmaceutical logistics,
+            driven by technological innovation and compassionate patient-centric
+            service.
+          </p>
+          <p class="font-semibold mt-4 text-white opacity-80">
+            — Setting the standard for care.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- History & Milestones Timeline -->
+    <section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <h2
+          class="text-4xl sm:text-5xl font-extrabold text-center mb-16 reveal-item"
+          style="color: blueviolet"
+        >
+          <span style="color: var(--accent-color)">Milestones</span> in Our
+          Journey
+        </h2>
+
+        <div class="timeline">
+          <!-- Milestone 1 -->
+          <div class="timeline-item reveal-item" style="--transition-delay: 0s">
+            <div class="timeline-content">
+              <h4 class="text-xl font-bold" style="color: var(--primary-color)">
+                2018: Founding & Seed Funding
+              </h4>
+              <p class="text-sm text-gray-600">
+                STACKLY is officially launched with a focus on oncology meds,
+                securing initial funding to develop proprietary temperature
+                monitoring hardware.
+              </p>
+            </div>
+            <div></div>
+            <!-- Spacer -->
+          </div>
+
+          <!-- Milestone 2 -->
+          <div
+            class="timeline-item reveal-item"
+            style="--transition-delay: 0.1s"
+          >
+            <div></div>
+            <!-- Spacer -->
+            <div class="timeline-content">
+              <h4 class="text-xl font-bold" style="color: var(--accent-color)">
+                2020: National Cold Chain Certification
+              </h4>
+              <p class="text-sm text-gray-600">
+                Achieved full national certification for cold chain logistics,
+                establishing compliance for biologics and specialty injectables
+                across all 50 states.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div
+            class="timeline-item reveal-item"
+            style="--transition-delay: 0.2s"
+          >
+            <div class="timeline-content">
+              <h4 class="text-xl font-bold" style="color: var(--primary-color)">
+                2022: Launch of Patient Tracking App
+              </h4>
+              <p class="text-sm text-gray-600">
+                Released the STACKLY mobile app, providing patients with
+                real-time GPS tracking and 24/7 pharmacist consultation access.
+              </p>
+            </div>
+            <div></div>
+            <!-- Spacer -->
+          </div>
+
+          <!-- Milestone 4 -->
+          <div
+            class="timeline-item reveal-item"
+            style="--transition-delay: 0.3s"
+          >
+            <div></div>
+            <!-- Spacer -->
+            <div class="timeline-content">
+              <h4 class="text-xl font-bold" style="color: var(--accent-color)">
+                2024: Expanded Specialties & Partnerships
+              </h4>
+              <p class="text-sm text-gray-600">
+                Expanded service lines to include Cardiology and Neurology
+                specialties. Secured major partnerships with leading U.S.
+                hospital networks and pharmaceutical manufacturers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="stackly-footer reveal-item" id="stackly-footer">
+      <div class="footer-content">
+        <!-- Top Section: Logo, Links, Address, Social -->
+        <div class="footer-top">
+          <!-- 1. Logo/Brand Section -->
+          <div
+            class="logo-section footer-section reveal-item"
+            style="transition-delay: 0.2s"
+          >
+            <img src="./file/logo.webp" alt="" />
+            <p>
+              Your fast track to pharmaceutical delivery. Always reliable,
+              always on time.
+            </p>
+          </div>
+
+          <!-- 2. Quick Links -->
+          <div
+            class="links-section footer-section reveal-item"
+            style="transition-delay: 0.4s"
+          >
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="./home2.html">HOME</a></li>
+              <li><a href="./service.html">SERVICES</a></li>
+              <li><a href="./about2.html">ABOUT</a></li>
+              <li><a href="./blog2.html">BLOG</a></li>
+              <li><a href="./shop.html">SHOP</a></li>
+            </ul>
+          </div>
+
+          <!-- 3. Company Address -->
+          <div
+            class="address-section footer-section reveal-item"
+            style="transition-delay: 0.6s"
+          >
+            <h3>Our Headquarters</h3>
+            <p>
+              <strong>STACKLY Inc.</strong><br />
+              1020 Innovation Drive,<br />
+              New York, NY 10001, USA<br />
+              <br />
+            </p>
+          </div>
+
+          <!-- 4. Social Media Icons -->
+          <div
+            class="social-section footer-section reveal-item"
+            style="transition-delay: 0.8s"
+          >
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="./404.html" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="./404.html" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="./404.html" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="./404.html" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section: Newsletter -->
+        <div class="footer-bottom reveal-item" style="transition-delay: 1s">
+          <h3>
+            <span style="color: var(--text-highlight)">Stay Updated</span> with
+            STACKLY
+          </h3>
+          <p>
+            Subscribe to our newsletter for exclusive offers and health tips.
+          </p>
+          <form class="newsletter-form" action="./404.html">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+
+          <!-- Copyright -->
+          <div class="copyright">
+            &copy; 2025 STACKLY Medicine Delivery. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./nav2.js"></script>
+    <script src="./footer2.js"></script>
+
+    <script>
+      // --- Scroll-to-Reveal Logic ---
+      function initializeScrollReveal() {
+        // Select all elements tagged for reveal
+        const revealItems = document.querySelectorAll(
+          ".reveal-item:not(.visible)"
+        );
+
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              obs.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        revealItems.forEach((item) => {
+          const delay = item.style.getPropertyValue("--transition-delay");
+          if (delay) {
+            item.style.transitionDelay = delay;
+          }
+          observer.observe(item);
+        });
+      }
+
+      // --- Initialization on Load ---
+      window.onload = function () {
+        initializeScrollReveal();
+      };
+    </script>
+  </body>
+</html>

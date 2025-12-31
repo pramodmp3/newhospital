@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STACKLY - Frequently Asked Questions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./faq.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header / Fixed Navbar -->
+    <header class="header">
+      <a href="./home2.html" class="logo-link">
+        <div class="logo-img"><img src="./file/logo.webp" alt="" /></div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links-desktop" aria-label="Main Navigation Desktop">
+        <ul class="nav-list-desktop">
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./home2.html" class="nav-link-desktop">HOME</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./index.html">HOME1</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./service.html" class="nav-link-desktop">SERVICES</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./faq.html" class="nav-link-desktop">FAQs</a>
+          </li>
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./about2.html" class="nav-link-desktop">ABOUT</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./about2.html">About US</a></li>
+              <li><a href="./career.html">CAREERS</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./blog2.html" class="nav-link-desktop">BLOG</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./contact2.html" class="nav-link-desktop">CONTACT</a>
+          </li>
+          <li class="nav-item-desktop shop-btn-desktop">
+            <a href="./shop.html" class="shop-btn-link">SHOP</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button
+        class="menu-toggle"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Toggle Navigation"
+      >
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </button>
+    </header>
+
+    <!-- Mobile Slide-in Navigation -->
+    <nav id="mobile-menu" class="nav-mobile" aria-label="Mobile Navigation">
+      <ul class="nav-list-mobile">
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="home-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="home-dropdown"
+            href="./home2.html"
+          >
+            HOME
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="home-dropdown" class="dropdown-mobile">
+            <li><a href="./index.html">HOME1</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./service.html" class="nav-link-mobile">SERVICES</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./faq.html" class="nav-link-mobile">FAQs</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="about-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="about-dropdown"
+            href="./about2.html"
+          >
+            ABOUT
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="about-dropdown" class="dropdown-mobile">
+            <li><a href="./about2.html">About US</a></li>
+            <li><a href="./career.html">CAREERS</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./blog2.html" class="nav-link-mobile">BLOG</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./contact2.html" class="nav-link-mobile">CONTACT</a>
+        </li>
+        <li class="nav-item-mobile">
+          <a href="./shop.html" class="shop-btn-mobile">SHOP</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Overlay for closing the mobile menu -->
+    <div class="overlay"></div>
+    <!-- Header & Hero Section -->
+    <header id="hero" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 shadow-2xl">
+      <div class="hero-shape shape-1"></div>
+      <div class="hero-shape shape-2"></div>
+      <div class="hero-shape shape-3"></div>
+
+      <div class="max-w-4xl mx-auto text-center relative z-10">
+        <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 tracking-tight">
+          <span class="text-white">STACKLY</span>
+          <span class="text-xl sm:text-3xl" style="color: var(--text-highlight)"
+            >FAQ</span
+          >
+        </h1>
+        <p class="text-lg sm:text-xl font-light opacity-90">
+          Your questions about specialized medicine delivery, answered with
+          clarity and trust.
+        </p>
+      </div>
+    </header>
+
+    <!-- Main FAQ Content Area -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <!-- Category: Oncology -->
+      <h2
+        class="text-3xl font-bold category-header reveal-item"
+        data-category="Oncology"
+      >
+        Oncology Medicines & Delivery
+      </h2>
+      <div class="space-y-4 mb-10">
+        <div class="accordion-item reveal-item">
+          <div class="accordion-header">
+            <span
+              class="accordion-question text-lg"
+              style="color: var(--text-highlight)"
+              >Q: How do you ensure the temperature control for chemotherapy
+              drugs?</span
+            >
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p class="accordion-content-inner">
+              A: We use validated, medical-grade cold chain packaging, including
+              specialized thermal shippers and phase-change materials. All
+              packages are tracked with temperature monitoring sensors to
+              maintain the required cold chain (typically 2-8°C) from our
+              pharmacy to your doorstep. We provide real-time status updates.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item reveal-item">
+          <div class="accordion-header">
+            <span
+              class="accordion-question text-lg"
+              style="color: var(--text-highlight)"
+              >Q: What security measures are in place for high-cost or high-risk
+              oncology medications?</span
+            >
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p class="accordion-content-inner">
+              A: High-cost medications are handled with an enhanced
+              chain-of-custody protocol. This includes secure, tamper-evident
+              packaging, dedicated delivery personnel, and a mandatory ID check
+              and signature upon receipt by the patient or authorized caregiver,
+              ensuring accountability and security throughout the transit
+              process.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item reveal-item">
+          <div class="accordion-header">
+            <span
+              class="accordion-question text-lg"
+              style="color: var(--text-highlight)"
+              >Q: Can I schedule recurring monthly deliveries for maintenance
+              therapy?</span
+            >
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p class="accordion-content-inner">
+              A: Yes, STACKLY specializes in scheduled deliveries. We will work
+              with you and your prescriber to set up a consistent monthly or
+              bi-weekly delivery schedule, ensuring you never miss a dose. We'll
+              send automated reminders before each shipment.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: Orthopedics -->
+      <h2
+        class="text-3xl font-bold category-header reveal-item"
+        data-category="Orthopedics"
+      >
+        Orthopedics Pain Management & Biologics
+      </h2>
+      <div class="space-y-4 mb-10">
+        <div class="accordion-item reveal-item">
+          <div class="accordion-header">
+            <span
+              class="accordion-question text-lg"
+              style="color: var(--text-highlight)"
+              >Q: How do I order specialized injectables like hyaluronic acid or
+              biologics?</span
+            >
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p class="accordion-content-inner">
+              A: Your physician can send the prescription directly to STACKLY.
+              We will handle all insurance verification and prior authorization.
+              Once approved, we coordinate with you for a delivery time that
+              ensures the medication arrives safely and is ready for
+              administration.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item reveal-item">
+          <div class="accordion-header">
+            <span
+              class="accordion-question text-lg"
+              style="color: var(--text-highlight)"
+              >Q: Are controlled substances for post-operative pain delivered
+              differently?</span
+            >
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p class="accordion-content-inner">
+              A: Yes, controlled pain medications follow strict regulatory
+              guidelines. They require explicit verification of the recipient's
+              identity and cannot be left unattended. Our drivers are trained to
+              follow federal and state laws, ensuring a secure, person-to-person
+              handoff.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: Neurology -->
+      <h2
+        class="text-3xl font-bold category-header reveal-item"
+        data-category="Neurology"
+      >
+        Neurology Medications & Handling
+      </h2>
+      <div class="space-y-4 mb-10">
+        <div class="accordion-item reveal-item">
+          <div class="accordion-header">
+            <span
+              class="accordion-question text-lg"
+              style="color: var(--text-highlight)"
+              >Q: I need an epilepsy medication immediately. What is your
+              fastest delivery option?</span
+            >
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p class="accordion-content-inner">
+              A: For urgent needs, we offer express, same-day delivery service
+              within local zones, pending inventory availability and
+              prescription verification. Please call our 24/7 support line
+              immediately after sending the prescription so we can expedite the
+              process.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item reveal-item">
+          <div class="accordion-header">
+            <span
+              class="accordion-question text-lg"
+              style="color: var(--text-highlight)"
+              >Q: Do you offer specialty medications for Multiple Sclerosis (MS)
+              or Parkinson's disease?</span
+            >
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p class="accordion-content-inner">
+              A: Absolutely. We stock a comprehensive list of specialty
+              neurology drugs. Our specialty pharmacy team offers patient
+              education, adherence monitoring, and dedicated clinical support
+              for complex therapies.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: Cardiology -->
+      <h2
+        class="text-3xl font-bold category-header reveal-item"
+        data-category="Cardiology"
+      >
+        Cardiology & Chronic Care
+      </h2>
+      <div class="space-y-4 mb-10">
+        <div class="accordion-item reveal-item">
+          <div class="accordion-header">
+            <span
+              class="accordion-question text-lg"
+              style="color: var(--text-highlight)"
+              >Q: Can I manage my ongoing chronic heart medication refills
+              through the STACKLY app?</span
+            >
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p class="accordion-content-inner">
+              A: Yes. Our dedicated mobile application allows you to track all
+              prescriptions, request refills with a single tap, set dosage
+              reminders, and manage your delivery address and schedule for all
+              your chronic care medications.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item reveal-item">
+          <div class="accordion-header">
+            <span
+              class="accordion-question text-lg"
+              style="color: var(--text-highlight)"
+              >Q: What is STACKLY's policy on medication returns or
+              exchanges?</span
+            >
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p class="accordion-content-inner">
+              A: Due to regulatory requirements and to ensure the integrity of
+              our specialized drugs, we generally cannot accept returned
+              medication once it has left our facility, except in cases of
+              dispensing error by our pharmacy. Please contact our support team
+              immediately if there is an issue with your order.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="stackly-footer reveal-item" id="stackly-footer">
+      <div class="footer-content">
+        <!-- Top Section: Logo, Links, Address, Social -->
+        <div class="footer-top">
+          <!-- 1. Logo/Brand Section -->
+          <div
+            class="logo-section footer-section reveal-item"
+            style="transition-delay: 0.2s"
+          >
+            <img src="./file/logo.webp" alt="" />
+            <p>
+              Your fast track to pharmaceutical delivery. Always reliable,
+              always on time.
+            </p>
+          </div>
+
+          <!-- 2. Quick Links -->
+          <div
+            class="links-section footer-section reveal-item"
+            style="transition-delay: 0.4s"
+          >
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="./home2.html">HOME</a></li>
+              <li><a href="./service.html">SERVICES</a></li>
+              <li><a href="./about2.html">ABOUT</a></li>
+              <li><a href="./blog2.html">BLOG</a></li>
+              <li><a href="./shop.html">SHOP</a></li>
+            </ul>
+          </div>
+
+          <!-- 3. Company Address -->
+          <div
+            class="address-section footer-section reveal-item"
+            style="transition-delay: 0.6s"
+          >
+            <h3>Our Headquarters</h3>
+            <p>
+              <strong>STACKLY Inc.</strong><br />
+              1020 Innovation Drive,<br />
+              New York, NY 10001, USA<br />
+              <br />
+            </p>
+          </div>
+
+          <!-- 4. Social Media Icons -->
+          <div
+            class="social-section footer-section reveal-item"
+            style="transition-delay: 0.8s"
+          >
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="./404.html" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="./404.html" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="./404.html" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="./404.html" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section: Newsletter -->
+        <div class="footer-bottom reveal-item" style="transition-delay: 1s">
+          <h3>
+            <span style="color: var(--text-highlight)">Stay Updated</span> with
+            STACKLY
+          </h3>
+          <p>
+            Subscribe to our newsletter for exclusive offers and health tips.
+          </p>
+          <form class="newsletter-form" action="./404.html">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+
+          <!-- Copyright -->
+          <div class="copyright">
+            &copy; 2025 STACKLY Medicine Delivery. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./nav2.js"></script>
+    <script>
+      const accordionItems = document.querySelectorAll(".accordion-item");
+
+      // Function to toggle the accordion
+      function toggleAccordion(item) {
+        // Collapse all other items
+        accordionItems.forEach((i) => {
+          if (i !== item && i.classList.contains("active")) {
+            i.classList.remove("active");
+            const content = i.querySelector(".accordion-content");
+            content.style.maxHeight = 0;
+          }
+        });
+
+        // Toggle the clicked item
+        item.classList.toggle("active");
+        const content = item.querySelector(".accordion-content");
+
+        if (item.classList.contains("active")) {
+          // Set max-height to the scroll height for smooth expansion
+          content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+          content.style.maxHeight = 0;
+        }
+      }
+
+      // Attach event listeners to all headers
+      accordionItems.forEach((item) => {
+        const header = item.querySelector(".accordion-header");
+        header.addEventListener("click", () => {
+          toggleAccordion(item);
+        });
+      });
+
+      // Scroll-to-Reveal Logic
+      const revealItems = document.querySelectorAll(".reveal-item");
+
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // Stop observing once revealed
+          }
+        });
+      }, observerOptions);
+
+      revealItems.forEach((item) => {
+        observer.observe(item);
+      });
+
+      // Initial check in case elements are already in view on load
+      window.addEventListener("load", () => {
+        revealItems.forEach((item) => {
+          if (item.getBoundingClientRect().top < window.innerHeight) {
+            item.classList.add("visible");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

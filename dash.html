@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Stackly Hospitals</title>
+    <!-- Importing a professional, modern font (Inter) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Using Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Linking the external CSS file -->
+    <link rel="stylesheet" href="dash.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <!-- Logo and Brand -->
+        <a href="./index.html" class="brand">
+          <div class="brand-logo"></div>
+          <img src="./assets/logo.webp" alt="" />
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links">
+          <!-- HOME (With Dropdown) -->
+          <li class="has-dropdown">
+            <!-- Added dropdown indicator icon -->
+            <a href="./index.html" class="nav-link" data-id="home-link">
+              HOME
+              <i class="fas fa-chevron-down nav-dropdown-icon"></i>
+            </a>
+            <ul class="dropdown" data-dropdown-id="home">
+              <li><a href="./home2.html">HOME2</a></li>
+            </ul>
+          </li>
+          <!-- SPECIALITIES (With Dropdown) -->
+          <li class="has-dropdown">
+            <!-- Added dropdown indicator icon -->
+            <a href="./spect.html" class="nav-link" data-id="specialities-link">
+              SPECIALITIES
+              <i class="fas fa-chevron-down nav-dropdown-icon"></i>
+            </a>
+            <ul class="dropdown" data-dropdown-id="specialities">
+              <li><a href="./card.html"> Cardiology</a></li>
+              <li><a href="./neu.html"> Neurology</a></li>
+              <li><a href="./orth.html"> Orthopedics</a></li>
+              <li><a href="./onco.html"> Oncology</a></li>
+            </ul>
+          </li>
+          <!-- Simple Links -->
+          <li><a href="./about.html" class="nav-link">ABOUT</a></li>
+          <li><a href="./blog.html" class="nav-link">BLOG</a></li>
+          <li><a href="./dash.html" class="nav-link">DASHBOARD</a></li>
+          <li><a href="./contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
+
+        <!-- Desktop Login Button -->
+        <div class="nav-actions">
+          <a href="./login.html"><button class="login-btn">LOGIN</button></a>
+        </div>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <i class="fas fa-bars" id="menu-icon"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Full-Screen Menu -->
+    <ul class="mobile-nav-menu" id="mobile-menu">
+      <!-- HOME (With Dropdown) -->
+      <li>
+        <div class="mobile-dropdown-container">
+          <a href="./index.html" class="nav-link">HOME</a>
+          <button
+            class="mobile-dropdown-toggle"
+            data-target="mobile-home-dropdown"
+            aria-expanded="false"
+          >
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <ul class="mobile-dropdown" id="mobile-home-dropdown">
+          <li><a href="./home2.html">HOME2</a></li>
+        </ul>
+      </li>
+      <!-- SPECIALITIES (With Dropdown) -->
+      <li>
+        <div class="mobile-dropdown-container">
+          <a href="./spect.html" class="nav-link">SPECIALITIES</a>
+          <button
+            class="mobile-dropdown-toggle"
+            data-target="mobile-specialities-dropdown"
+            aria-expanded="false"
+          >
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <ul class="mobile-dropdown" id="mobile-specialities-dropdown">
+          <li><a href="./card.html"> Cardiology</a></li>
+          <li><a href="./neu.html"> Neurology</a></li>
+          <li><a href="./orth.html"> Orthopedics</a></li>
+          <li><a href="./onco.html">Oncology</a></li>
+        </ul>
+      </li>
+      <!-- Simple Links -->
+      <li><a href="./about.html" class="nav-link">ABOUT</a></li>
+      <li><a href="./blog.html" class="nav-link">BLOG</a></li>
+      <li><a href="./dash.html" class="nav-link">DASHBOARD</a></li>
+      <li><a href="./contact.html" class="nav-link">CONTACT</a></li>
+
+      <!-- Mobile Login Button -->
+      <div class="login-btn-mobile">
+        <a href="./login.html"
+          ><button class="login-btn" style="width: 100%">LOGIN</button></a
+        >
+      </div>
+    </ul>
+    <!-- FLOATING BLURRED BLOB BACKGROUND CONTAINER -->
+    <div class="blob-bg">
+      <span class="blob"></span>
+      <span class="blob"></span>
+      <span class="blob"></span>
+      <span class="blob"></span>
+    </div>
+
+    <div class="dashboard-container">
+      <header class="dashboard-header animated-section">
+        <h1 style="font-size: 2rem">
+          <i class="fas fa-chart-line"></i> Stackly Admin Dashboard
+        </h1>
+
+        <div class="nav-buttons">
+          <!-- Clickable Button: Users -->
+          <a href="404.html" class="nav-btn">
+            <i class="fas fa-users"></i> Users
+          </a>
+          <!-- Clickable Button: Messages -->
+          <a href="404.html" class="nav-btn">
+            <i class="fas fa-envelope"></i> Messages
+          </a>
+        </div>
+      </header>
+
+      <!-- 1. Analytics / Overview Cards -->
+      <section class="animated-section" id="analytics">
+        <h2>Key Metrics Overview</h2>
+        <div class="analytics-grid">
+          <!-- Card 1: Total Patients -->
+          <div class="analytics-card">
+            <div class="card-icon"><i class="fas fa-bed"></i></div>
+            <div class="card-details">
+              <span class="counter-value card-value" data-target="1845">0</span>
+              <span class="card-label">In-House Patients</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Appointments Today -->
+          <div class="analytics-card">
+            <div class="card-icon"><i class="fas fa-calendar-day"></i></div>
+            <div class="card-details">
+              <span class="counter-value card-value" data-target="124">0</span>
+              <span class="card-label">Appointments Today</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Monthly Revenue -->
+          <div class="analytics-card">
+            <div class="card-icon"><i class="fas fa-dollar-sign"></i></div>
+            <div class="card-details">
+              <span class="counter-value card-value" data-target="98">0</span>M
+              <span class="card-label">Monthly Revenue (M)</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Orders (Pharmacy/Supply) -->
+          <div class="analytics-card">
+            <div class="card-icon"><i class="fas fa-box-open"></i></div>
+            <div class="card-details">
+              <span class="counter-value card-value" data-target="27">0</span>
+              <span class="card-label">Supply Orders</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Main Dashboard Grid (Orders and Messages) -->
+      <div class="main-grid">
+        <!-- Orders / Tasks Section -->
+        <section class="animated-section" id="orders-tasks">
+          <h2>Recent Pharmacy & Lab Orders</h2>
+          <div class="orders-section">
+            <table class="orders-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Patient</th>
+                  <th>Type</th>
+                  <th>Location</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#L4902</td>
+                  <td>P405</td>
+                  <td>MRI Scan</td>
+                  <td>Radiology</td>
+                  <td>
+                    <span class="order-status status-urgent">Urgent</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#P1158</td>
+                  <td>P121</td>
+                  <td>Pain Meds</td>
+                  <td>Pharmacy</td>
+                  <td>
+                    <span class="order-status status-completed">Completed</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#L4903</td>
+                  <td>P887</td>
+                  <td>Blood Test</td>
+                  <td>Lab</td>
+                  <td>
+                    <span class="order-status status-pending">Pending</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#S3001</td>
+                  <td>N/A</td>
+                  <td>New Supplies</td>
+                  <td>Logistics</td>
+                  <td>
+                    <span class="order-status status-completed">Completed</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Messages / Notifications List -->
+        <section class="animated-section" id="messages-list">
+          <h2>Latest Notifications</h2>
+          <div class="messages-section">
+            <ul class="message-list">
+              <!-- Message 1 -->
+              <li class="message-item">
+                <div class="message-header">
+                  <span class="sender"
+                    ><i class="fas fa-exclamation-triangle"></i> System
+                    Alert</span
+                  >
+                  <span class="timestamp">1 min ago</span>
+                </div>
+                <p class="message-snippet">
+                  PACS Server overload in Wing B: check diagnostics...
+                </p>
+              </li>
+
+              <!-- Message 2 -->
+              <li class="message-item">
+                <div class="message-header">
+                  <span class="sender">Dr. Ramirez</span>
+                  <span class="timestamp">15 min ago</span>
+                </div>
+                <p class="message-snippet">
+                  Patient P405 status update: stable after procedure...
+                </p>
+              </li>
+
+              <!-- Message 3 -->
+              <li class="message-item">
+                <div class="message-header">
+                  <span class="sender">HR Dept</span>
+                  <span class="timestamp">2 hr ago</span>
+                </div>
+                <p class="message-snippet">
+                  Mandatory compliance training deadline approaching...
+                </p>
+              </li>
+
+              <!-- Message 4 -->
+              <li class="message-item">
+                <div class="message-header">
+                  <span class="sender">Pharmacy</span>
+                  <span class="timestamp">4 hr ago</span>
+                </div>
+                <p class="message-snippet">
+                  Stock low on essential vaccine doses; please order...
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- 1. Logo & Branding -->
+        <div class="footer-section branding">
+          <a href="./index.html" class="brand-footer">
+            <img src="./assets/logo.webp" alt="" />
+          </a>
+          <p class="brand-tagline">
+            Pioneering healthcare through innovation and compassion, delivering
+            tomorrow's patient care, today.
+          </p>
+          <div class="social-icons">
+            <a href="./404.html" class="social-icon" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- 2. Quick Links -->
+        <div class="footer-section quick-links">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./spect.html">SPECIALITIES</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./blog.html">BLOG</a></li>
+            <li><a href="./dash.html">DASHBOARD</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Address Section -->
+        <div class="footer-section footer-address">
+          <h4>Contact & Address</h4>
+          <p>
+            <i class="fas fa-location-dot"></i>
+            Level 10, Innovation Tower, Cyber City, Stacklyville 90210
+          </p>
+          <p>
+            <i class="fas fa-phone"></i>
+            (800) 555-0199
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i>
+            info@stacklyhospitals.com
+          </p>
+        </div>
+
+        <!-- 4. Newsletter Subscription -->
+        <div class="footer-section newsletter">
+          <h4>Stay Updated</h4>
+          <p>
+            Subscribe to our newsletter for the latest healthcare news and
+            research breakthroughs.
+          </p>
+          <form class="newsletter-form" action="./404.html">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              required
+              class="newsletter-input"
+              id="newsletter-email"
+            />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; <span id="current-year"></span> Stackly HOSPITALS. All rights
+        reserved. | Privacy Policy | Terms of Service
+      </div>
+    </footer>
+    <script src="./nav.js"></script>
+    <script src="./footer.js"></script>
+    <script>
+      /*
+        --------------------------------------------------------
+        JAVASCRIPT LOGIC
+        --------------------------------------------------------
+        Handles section slide-in on scroll and animated counters.
+        */
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll(".animated-section");
+        const counterValues = document.querySelectorAll(".counter-value");
+        let countersAnimated = false;
+
+        // --- 1. Counter Animation Function ---
+        const animateCounter = (el) => {
+          // Remove non-numeric characters for parsing (like M or %)
+          const targetText = el.getAttribute("data-target");
+          const target = parseInt(targetText.replace(/[^0-9]/g, ""));
+          const suffix = targetText.match(/[^0-9\s]*$/)
+            ? targetText.match(/[^0-9\s]*$/)[0]
+            : "";
+
+          const duration = 2000; // 2 seconds
+          let startTimestamp = null;
+          const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min(
+              (timestamp - startTimestamp) / duration,
+              1
+            );
+            const currentValue = Math.floor(progress * target);
+
+            // Format number with commas and add suffix
+            el.textContent = currentValue.toLocaleString() + suffix;
+
+            if (progress < 1) {
+              window.requestAnimationFrame(step);
+            } else {
+              el.textContent = target.toLocaleString() + suffix; // Ensure final value is exact
+            }
+          };
+          window.requestAnimationFrame(step);
+        };
+
+        // --- 2. Intersection Observer for Slide-in & Counters ---
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+
+                // Trigger counters only once when the analytics section is visible
+                if (entry.target.id === "analytics" && !countersAnimated) {
+                  counterValues.forEach(animateCounter);
+                  countersAnimated = true;
+                }
+
+                // Stop observing visible sections
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            // Trigger animation when 20% of the element is visible
+            threshold: 0.2,
+          }
+        );
+
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+      });
+    </script>
+  </body>
+</html>

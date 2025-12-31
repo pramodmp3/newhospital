@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STACKLY | Fast, Reliable Medicine Delivery</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./home2.css" />
+    <!-- Load Lucide Icons for aesthetic appeal -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <!-- Header / Fixed Navbar -->
+    <header class="header">
+      <a href="./home2.html" class="logo-link">
+        <div class="logo-img"><img src="./file/logo.webp" alt="" /></div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links-desktop" aria-label="Main Navigation Desktop">
+        <ul class="nav-list-desktop">
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./home2.html" class="nav-link-desktop">HOME</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./index.html">HOME1</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./service.html" class="nav-link-desktop">SERVICES</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./faq.html" class="nav-link-desktop">FAQs</a>
+          </li>
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./about2.html" class="nav-link-desktop">ABOUT</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./about2.html">About US</a></li>
+              <li><a href="./career.html">CAREERS</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./blog2.html" class="nav-link-desktop">BLOG</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./contact2.html" class="nav-link-desktop">CONTACT</a>
+          </li>
+          <li class="nav-item-desktop shop-btn-desktop">
+            <a href="./shop.html" class="shop-btn-link">SHOP</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button
+        class="menu-toggle"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Toggle Navigation"
+      >
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </button>
+    </header>
+
+    <!-- Mobile Slide-in Navigation -->
+    <nav id="mobile-menu" class="nav-mobile" aria-label="Mobile Navigation">
+      <ul class="nav-list-mobile">
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="home-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="home-dropdown"
+            href="./home2.html"
+          >
+            HOME
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="home-dropdown" class="dropdown-mobile">
+            <li><a href="./index.html">HOME1</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./service.html" class="nav-link-mobile">SERVICES</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./faq.html" class="nav-link-mobile">FAQs</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="about-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="about-dropdown"
+            href="./about2.html"
+          >
+            ABOUT
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="about-dropdown" class="dropdown-mobile">
+            <li><a href="./about2.html">About US</a></li>
+            <li><a href="./career.html">CAREERS</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./blog2.html" class="nav-link-mobile">BLOG</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./contact2.html" class="nav-link-mobile">CONTACT</a>
+        </li>
+        <li class="nav-item-mobile">
+          <a href="./shop.html" class="shop-btn-mobile">SHOP</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Overlay for closing the mobile menu -->
+    <div class="overlay"></div>
+    <main>
+      <!-- 1. Hero Section -->
+      <section
+        class="relative overflow-hidden pt-16 md:pt-24 pb-16"
+        style="
+          background-image: var(--gradient-primary);
+          background-size: 100% 100%;
+        "
+      >
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center text-white"
+        >
+          <!-- Hero Content -->
+          <div class="reveal slide-left text-center md:text-left">
+            <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight mb-4">
+              <span style="color: var(--text-highlight)"
+                >Health, Delivered.</span
+              >
+              <br class="hidden lg:inline" />
+              Anytime, Anywhere.
+            </h1>
+            <p class="text-xl lg:text-2xl font-light mb-8 opacity-90">
+              Your essential medicines, delivered reliably and quickly, right to
+              your doorstep. Trust STACKLY for precision in every prescription.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start"
+            >
+              <a
+                href="./shop.html"
+                class="cta-button"
+                style="
+                  background: var(--gradient-button);
+                  color: var(--text-dark);
+                "
+              >
+                Order Medicines Now
+              </a>
+              <a
+                href="./service.html"
+                class="cta-button cta-button-secondary"
+                style="
+                  border-color: var(--text-light);
+                  color: var(--text-light);
+                "
+              >
+                Explore Services
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Illustration / Image Placeholder -->
+          <div class="reveal slide-right flex justify-center p-8">
+            <!-- Placeholder using a clean, modern SVG icon -->
+            <div
+              class="w-full max-w-md h-auto bg-white/20 p-8 rounded-3xl shadow-2xl backdrop-blur-sm transform rotate-3"
+              style="border: 4px solid var(--accent-color)"
+            >
+              <i
+                data-lucide="ambulance"
+                class="w-24 h-24 mx-auto mb-4"
+                style="color: var(--text-highlight)"
+              ></i>
+              <p class="text-center font-bold text-2xl">Fast & Safe Delivery</p>
+              <p class="text-center text-sm mt-2 opacity-80">
+                Mockup of a sleek delivery illustration.
+              </p>
+              <div
+                class="mt-4 h-4 rounded-full bg-white/50 w-3/4 mx-auto"
+              ></div>
+              <div
+                class="mt-2 h-4 rounded-full bg-white/50 w-1/2 mx-auto"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Services Section -->
+      <section id="services" class="py-16 md:py-24 bg-white/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12 reveal">
+            <h2
+              class="text-4xl font-extrabold mb-4"
+              style="color: var(--primary-color)"
+            >
+              Our Commitment to Your Health
+            </h2>
+            <p class="text-lg text-gray-600">
+              Experience a new standard in pharmacy delivery.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Service 1: Fast Delivery -->
+            <div
+              class="reveal card-hover p-6 rounded-2xl bg-white shadow-xl flex flex-col items-center text-center"
+            >
+              <div
+                class="p-4 rounded-full mb-4"
+                style="background-image: var(--gradient-secondary)"
+              >
+                <i data-lucide="zap" class="w-8 h-8 text-white"></i>
+              </div>
+              <h3
+                class="text-xl font-bold mb-2"
+                style="color: var(--secondary-color)"
+              >
+                Lightning Fast Delivery
+              </h3>
+              <p class="text-gray-500">
+                Get urgent prescriptions delivered within hours, not days.
+                Health can't wait.
+              </p>
+            </div>
+
+            <!-- Service 2: Reliable Medicines -->
+            <div
+              class="reveal card-hover p-6 rounded-2xl bg-white shadow-xl flex flex-col items-center text-center"
+            >
+              <div
+                class="p-4 rounded-full mb-4"
+                style="background-image: var(--gradient-primary)"
+              >
+                <i data-lucide="shield-check" class="w-8 h-8 text-white"></i>
+              </div>
+              <h3
+                class="text-xl font-bold mb-2"
+                style="color: var(--primary-color)"
+              >
+                Certified & Reliable
+              </h3>
+              <p class="text-gray-500">
+                Sourced only from verified, licensed pharmacies. Quality and
+                authenticity guaranteed.
+              </p>
+            </div>
+
+            <!-- Service 3: Customer Support -->
+            <div
+              class="reveal card-hover p-6 rounded-2xl bg-white shadow-xl flex flex-col items-center text-center"
+            >
+              <div
+                class="p-4 rounded-full mb-4"
+                style="background-image: var(--gradient-accent)"
+              >
+                <i
+                  data-lucide="message-square-text"
+                  class="w-8 h-8 text-white"
+                ></i>
+              </div>
+              <h3
+                class="text-xl font-bold mb-2"
+                style="color: var(--accent-color)"
+              >
+                24/7 Expert Support
+              </h3>
+              <p class="text-gray-500">
+                Need help with an order or prescription? Our team is available
+                around the clock.
+              </p>
+            </div>
+
+            <!-- Service 4: Order Tracking -->
+            <div
+              class="reveal card-hover p-6 rounded-2xl bg-white shadow-xl flex flex-col items-center text-center"
+            >
+              <div
+                class="p-4 rounded-full mb-4"
+                style="background-image: var(--gradient-button)"
+              >
+                <i data-lucide="map-pin" class="w-8 h-8 text-white"></i>
+              </div>
+              <h3
+                class="text-xl font-bold mb-2"
+                style="color: var(--text-highlight)"
+              >
+                Real-Time Order Tracking
+              </h3>
+              <p class="text-gray-500">
+                Know exactly where your medication is from pharmacy pickup to
+                your door.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Featured Categories Section -->
+      <section
+        id="categories"
+        class="py-16 md:py-24"
+        style="
+          background: linear-gradient(
+            to top right,
+            var(--primary-color) 5%,
+            var(--secondary-color) 60%
+          );
+        "
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12 reveal">
+            <h2 class="text-4xl font-extrabold mb-4 text-white">
+              Explore Specialty Categories
+            </h2>
+            <p class="text-lg text-white/80">
+              Access specialized medicines easily and confidently.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Category 1: Oncology -->
+            <div
+              class="reveal slide-left card-hover bg-white rounded-xl shadow-2xl overflow-hidden"
+            >
+              <div class="p-6">
+                <i
+                  data-lucide="dna"
+                  class="w-8 h-8 mb-3"
+                  style="color: var(--primary-color)"
+                ></i>
+                <h3 class="text-xl font-bold mb-1">Oncology</h3>
+                <p class="text-sm text-gray-500">
+                  Critical medications for cancer treatment and support.
+                </p>
+              </div>
+              <div
+                class="h-2"
+                style="background: var(--gradient-primary)"
+              ></div>
+            </div>
+
+            <!-- Category 2: Orthopedics -->
+            <div
+              class="reveal card-hover bg-white rounded-xl shadow-2xl overflow-hidden"
+            >
+              <div class="p-6">
+                <i
+                  data-lucide="bone"
+                  class="w-8 h-8 mb-3"
+                  style="color: var(--secondary-color)"
+                ></i>
+                <h3 class="text-xl font-bold mb-1">Orthopedics</h3>
+                <p class="text-sm text-gray-500">
+                  Pain relief, anti-inflammatories, and joint support.
+                </p>
+              </div>
+              <div
+                class="h-2"
+                style="background: var(--gradient-secondary)"
+              ></div>
+            </div>
+
+            <!-- Category 3: Neurology -->
+            <div
+              class="reveal card-hover bg-white rounded-xl shadow-2xl overflow-hidden"
+            >
+              <div class="p-6">
+                <i
+                  data-lucide="brain-circuit"
+                  class="w-8 h-8 mb-3"
+                  style="color: var(--accent-color)"
+                ></i>
+                <h3 class="text-xl font-bold mb-1">Neurology</h3>
+                <p class="text-sm text-gray-500">
+                  Medicines for neurological disorders and mental health.
+                </p>
+              </div>
+              <div class="h-2" style="background: var(--gradient-accent)"></div>
+            </div>
+
+            <!-- Category 4: Cardiology -->
+            <div
+              class="reveal slide-right card-hover bg-white rounded-xl shadow-2xl overflow-hidden"
+            >
+              <div class="p-6">
+                <i
+                  data-lucide="heart-pulse"
+                  class="w-8 h-8 mb-3"
+                  style="color: var(--text-highlight)"
+                ></i>
+                <h3 class="text-xl font-bold mb-1">Cardiology</h3>
+                <p class="text-sm text-gray-500">
+                  Prescriptions for heart health and cardiovascular care.
+                </p>
+              </div>
+              <div class="h-2" style="background: var(--gradient-button)"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Testimonials / Customer Reviews Section -->
+      <section id="reviews" class="py-16 md:py-24 bg-gray-50/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12 reveal">
+            <h2
+              class="text-4xl font-extrabold mb-4"
+              style="color: var(--secondary-color)"
+            >
+              What Our Customers Say
+            </h2>
+            <p class="text-lg text-gray-600">
+              Don't just take our word for it—read our trusted reviews.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Review 1 -->
+            <div
+              class="reveal p-6 rounded-2xl bg-white shadow-xl border-t-4 border-amber-400"
+            >
+              <div class="flex items-center mb-4">
+                <i
+                  data-lucide="star"
+                  class="w-5 h-5 fill-yellow-400 stroke-yellow-400"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-5 h-5 fill-yellow-400 stroke-yellow-400"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-5 h-5 fill-yellow-400 stroke-yellow-400"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-5 h-5 fill-yellow-400 stroke-yellow-400"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-5 h-5 fill-yellow-400 stroke-yellow-400"
+                ></i>
+              </div>
+              <p class="italic text-gray-700 mb-4">
+                "The fastest delivery service I've ever used! Medications
+                arrived perfectly packaged and the tracking was flawless. A huge
+                relief for urgent needs."
+              </p>
+              <p class="font-semibold" style="color: var(--text-dark)">
+                - Sarah J.
+              </p>
+            </div>
+
+            <!-- Review 2 -->
+            <div
+              class="reveal p-6 rounded-2xl bg-white shadow-xl border-t-4 border-pink-500"
+              style="border-top-color: var(--primary-color)"
+            >
+              <div class="flex items-center mb-4">
+                <!-- 5 Stars -->
+                <i
+                  data-lucide="star"
+                  class="w-5 h-5 fill-yellow-400 stroke-yellow-400"
+                ></i
+                ><i
+                  data-lucide="star"
+                  class="w-5 h-5 fill-yellow-400 stroke-yellow-400"
+                ></i
+                ><i
+                  data-lucide="star"
+                  class="w-5 h-5 fill-yellow-400 stroke-yellow-400"
+                ></i
+                ><i
+                  data-lucide="star"
+                  class="w-5 h-5 fill-yellow-400 stroke-yellow-400"
+                ></i
+                ><i
+                  data-lucide="star"
+                  class="w-5 h-5 fill-yellow-400 stroke-yellow-400"
+                ></i>
+              </div>
+              <p class="italic text-gray-700 mb-4">
+                "I appreciate the commitment to authentic medicines. It gives me
+                peace of mind knowing the pharmacy source is always reliable and
+                certified."
+              </p>
+              <p class="font-semibold" style="color: var(--text-dark)">
+                - Mark P.
+              </p>
+            </div>
+
+            <!-- Review 3 -->
+            <div
+              class="reveal p-6 rounded-2xl bg-white shadow-xl border-t-4 border-cyan-400"
+              style="border-top-color: var(--accent-color)"
+            >
+              <div class="flex items-center mb-4">
+                <!-- 5 Stars -->
+                <i
+                  data-lucide="star"
+                  class="w-5 h-5 fill-yellow-400 stroke-yellow-400"
+                ></i
+                ><i
+                  data-lucide="star"
+                  class="w-5 h-5 fill-yellow-400 stroke-yellow-400"
+                ></i
+                ><i
+                  data-lucide="star"
+                  class="w-5 h-5 fill-yellow-400 stroke-yellow-400"
+                ></i
+                ><i
+                  data-lucide="star"
+                  class="w-5 h-5 fill-yellow-400 stroke-yellow-400"
+                ></i
+                ><i
+                  data-lucide="star-half"
+                  class="w-5 h-5 fill-yellow-400 stroke-yellow-400"
+                ></i>
+              </div>
+              <p class="italic text-gray-700 mb-4">
+                "Excellent customer service! They clarified my prescription
+                issue quickly and professionally. STACKLY is now my go-to for
+                refills."
+              </p>
+              <p class="font-semibold" style="color: var(--text-dark)">
+                - Emily K.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Final CTA Section: Order Now -->
+      <section
+        class="py-16 md:py-20"
+        id="contact"
+        style="background-image: var(--gradient-secondary)"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+          <h2 class="text-4xl lg:text-5xl font-extrabold mb-4 text-white">
+            Ready to Simplify Your Pharmacy Routine?
+          </h2>
+          <p class="text-xl mb-8 text-white/90">
+            Join thousands of satisfied customers and get your health needs
+            delivered effortlessly.
+          </p>
+          <a
+            href="./shop.html"
+            class="cta-button text-2xl"
+            style="
+              background: var(--gradient-primary);
+              color: var(--text-light);
+              padding: 1rem 3.5rem;
+            "
+          >
+            Order Now
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="stackly-footer reveal-item" id="stackly-footer">
+      <div class="footer-content">
+        <!-- Top Section: Logo, Links, Address, Social -->
+        <div class="footer-top">
+          <!-- 1. Logo/Brand Section -->
+          <div
+            class="logo-section footer-section reveal-item"
+            style="transition-delay: 0.2s"
+          >
+            <img src="./file/logo.webp" alt="" />
+            <p>
+              Your fast track to pharmaceutical delivery. Always reliable,
+              always on time.
+            </p>
+          </div>
+
+          <!-- 2. Quick Links -->
+          <div
+            class="links-section footer-section reveal-item"
+            style="transition-delay: 0.4s"
+          >
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="./home2.html">HOME</a></li>
+              <li><a href="./service.html">SERVICES</a></li>
+              <li><a href="./about2.html">ABOUT</a></li>
+              <li><a href="./blog2.html">BLOG</a></li>
+              <li><a href="./shop.html">SHOP</a></li>
+            </ul>
+          </div>
+
+          <!-- 3. Company Address -->
+          <div
+            class="address-section footer-section reveal-item"
+            style="transition-delay: 0.6s"
+          >
+            <h3>Our Headquarters</h3>
+            <p>
+              <strong>STACKLY Inc.</strong><br />
+              1020 Innovation Drive,<br />
+              New York, NY 10001, USA<br />
+              <br />
+            </p>
+          </div>
+
+          <!-- 4. Social Media Icons -->
+          <div
+            class="social-section footer-section reveal-item"
+            style="transition-delay: 0.8s"
+          >
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="./404.html" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="./404.html" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="./404.html" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="./404.html" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section: Newsletter -->
+        <div class="footer-bottom reveal-item" style="transition-delay: 1s">
+          <h3>
+            <span style="color: var(--text-highlight)">Stay Updated</span> with
+            STACKLY
+          </h3>
+          <p>
+            Subscribe to our newsletter for exclusive offers and health tips.
+          </p>
+          <form class="newsletter-form" action="./404.html">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+
+          <!-- Copyright -->
+          <div class="copyright">
+            &copy; 2025 STACKLY Medicine Delivery. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./nav2.js"></script>
+    <script src="./footer2.js"></script>
+    <script>
+      // Initialize Lucide Icons
+      // This scans the DOM for elements with data-lucide attribute and replaces them with SVG icons.
+      lucide.createIcons();
+
+      // JavaScript for Scroll-Reveal Animation
+      document.addEventListener("DOMContentLoaded", () => {
+        // Removed the footer date update since the footer is gone
+
+        const revealElements = document.querySelectorAll(".reveal");
+
+        const observerOptions = {
+          root: null, // relative to the viewport
+          rootMargin: "0px",
+          threshold: 0.1, // 10% of element visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            // If the element is intersecting (visible), add the 'visible' class
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              // Stop observing once visible to prevent unnecessary checks
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        // Observe each element
+        revealElements.forEach((element) => {
+          observer.observe(element);
+        });
+      });
+    </script>
+  </body>
+</html>

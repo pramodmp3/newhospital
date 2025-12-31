@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STACKLY - Specialized Medicine Delivery Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./service.css" />
+    <!-- Font Awesome for Social Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Inter Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header / Fixed Navbar -->
+    <header class="header">
+      <a href="./home2.html" class="logo-link">
+        <div class="logo-img"><img src="./file/logo.webp" alt="" /></div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links-desktop" aria-label="Main Navigation Desktop">
+        <ul class="nav-list-desktop">
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./home2.html" class="nav-link-desktop">HOME</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./index.html">HOME1</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./service.html" class="nav-link-desktop">SERVICES</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./faq.html" class="nav-link-desktop">FAQs</a>
+          </li>
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./about2.html" class="nav-link-desktop">ABOUT</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./about2.html">About US</a></li>
+              <li><a href="./career.html">CAREERS</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./blog2.html" class="nav-link-desktop">BLOG</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./contact2.html" class="nav-link-desktop">CONTACT</a>
+          </li>
+          <li class="nav-item-desktop shop-btn-desktop">
+            <a href="./shop.html" class="shop-btn-link">SHOP</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button
+        class="menu-toggle"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Toggle Navigation"
+      >
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </button>
+    </header>
+
+    <!-- Mobile Slide-in Navigation -->
+    <nav id="mobile-menu" class="nav-mobile" aria-label="Mobile Navigation">
+      <ul class="nav-list-mobile">
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="home-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="home-dropdown"
+            href="./home2.html"
+          >
+            HOME
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="home-dropdown" class="dropdown-mobile">
+            <li><a href="./index.html">HOME1</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./service.html" class="nav-link-mobile">SERVICES</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./faq.html" class="nav-link-mobile">FAQs</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="about-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="about-dropdown"
+            href="./about2.html"
+          >
+            ABOUT
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="about-dropdown" class="dropdown-mobile">
+            <li><a href="./about2.html">About US</a></li>
+            <li><a href="./career.html">CAREERS</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./blog2.html" class="nav-link-mobile">BLOG</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./contact2.html" class="nav-link-mobile">CONTACT</a>
+        </li>
+        <li class="nav-item-mobile">
+          <a href="./shop.html" class="shop-btn-mobile">SHOP</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Overlay for closing the mobile menu -->
+    <div class="overlay"></div>
+    <!-- Header & Hero Section -->
+    <header id="hero" class="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 shadow-xl">
+      <div class="hero-shape shape-1"></div>
+      <div class="hero-shape shape-2"></div>
+      <div class="hero-shape shape-3"></div>
+      <div class="hero-shape shape-4"></div>
+
+      <div class="max-w-4xl mx-auto text-center relative z-10 reveal-item">
+        <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 tracking-tight">
+          Our <span class="text-white">Specialized</span> Delivery
+          <span style="color: var(--text-highlight)">Services</span>
+        </h1>
+        <p
+          class="text-lg sm:text-xl font-light mt-4 opacity-90 max-w-2xl mx-auto"
+        >
+          Reliable, secure, and rapid pharmaceutical logistics tailored for
+          high-value and temperature-sensitive medications.
+        </p>
+        <a href="./404.html" class="main-cta-btn mt-8 reveal-item"
+          >Start Your Delivery Today</a
+        >
+      </div>
+    </header>
+
+    <!-- Key Metrics Section -->
+    <section id="metrics" class="py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto reveal-item">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+          <!-- Metric 1: Average Delivery Time -->
+          <div class="metric-card">
+            <div class="metric-value">22</div>
+            <div class="metric-label">Avg. Delivery Time (Hours)</div>
+          </div>
+          <!-- Metric 2: On-Time Rate -->
+          <div class="metric-card">
+            <div class="metric-value">99%</div>
+            <div class="metric-label">On-Time Delivery Rate</div>
+          </div>
+          <!-- Metric 3: Satisfied Customers -->
+          <div class="metric-card">
+            <div class="metric-value">20k+</div>
+            <div class="metric-label">Satisfied Patients & Providers</div>
+          </div>
+          <!-- Metric 4: Logistics Experience -->
+          <div class="metric-card">
+            <div class="metric-value">10+</div>
+            <div class="metric-label">Years in Specialty Logistics</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Services Section -->
+    <section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <h2
+          class="text-4xl sm:text-5xl font-extrabold text-center mb-12 reveal-item"
+        >
+          <span style="color: var(--primary-color)">
+            Our Commitment to Excellence</span
+          >
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service Card 1: Certified Cold Chain -->
+          <div class="service-card reveal-item" style="--transition-delay: 0s">
+            <!-- Inline SVG Icon: Thermometer/Cooling -->
+            <svg
+              class="service-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"
+              />
+              <circle cx="12" cy="18" r="2.5" />
+              <path d="M10 9h4" />
+            </svg>
+            <h3
+              class="text-xl font-semibold mb-3"
+              style="color: var(--text-dark)"
+            >
+              Certified Cold Chain Logistics
+            </h3>
+            <p class="text-gray-600">
+              We guarantee strict temperature control (2-8°C) for all biologics
+              and high-sensitivity drugs using monitored, validated thermal
+              shippers and specialized cooling packs.
+            </p>
+          </div>
+
+          <!-- Service Card 2: 24-Hour Express Delivery -->
+          <div
+            class="service-card reveal-item"
+            style="--transition-delay: 0.1s"
+          >
+            <!-- Inline SVG Icon: Clock/Fast -->
+            <svg
+              class="service-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="m4.93 19.07 1.41-1.41"></path>
+              <path d="m17.66 6.34 1.41-1.41"></path>
+            </svg>
+            <h3
+              class="text-xl font-semibold mb-3"
+              style="color: var(--text-dark)"
+            >
+              Rapid & Reliable Delivery
+            </h3>
+            <p class="text-gray-600">
+              Most prescriptions are delivered within 24-48 hours nationwide. We
+              also offer same-day express options for urgent, critical
+              medications in designated areas.
+            </p>
+          </div>
+
+          <!-- Service Card 3: Real-Time Tracking -->
+          <div
+            class="service-card reveal-item"
+            style="--transition-delay: 0.2s"
+          >
+            <!-- Inline SVG Icon: Map/Tracking -->
+            <svg
+              class="service-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <h3
+              class="text-xl font-semibold mb-3"
+              style="color: var(--text-dark)"
+            >
+              Real-Time Order Visibility
+            </h3>
+            <p class="text-gray-600">
+              Track your order from the moment it leaves our pharmacy to your
+              door via our secure mobile app. Receive notifications at every
+              critical delivery stage.
+            </p>
+          </div>
+
+          <!-- Service Card 4: Secure Packaging & Handoff -->
+          <div
+            class="service-card reveal-item"
+            style="--transition-delay: 0.3s"
+          >
+            <!-- Inline SVG Icon: Lock/Shield -->
+            <svg
+              class="service-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <h3
+              class="text-xl font-semibold mb-3"
+              style="color: var(--text-dark)"
+            >
+              Security and Integrity
+            </h3>
+            <p class="text-gray-600">
+              All shipments use tamper-evident seals and follow a documented
+              chain of custody. Controlled substances require mandatory ID
+              verification for safety.
+            </p>
+          </div>
+
+          <!-- Service Card 5: Insurance & Enrollment Support -->
+          <div
+            class="service-card reveal-item"
+            style="--transition-delay: 0.4s"
+          >
+            <!-- Inline SVG Icon: Document/Checkmark -->
+            <svg
+              class="service-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"
+              ></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <polyline points="10 15 12 17 16 13"></polyline>
+            </svg>
+            <h3
+              class="text-xl font-semibold mb-3"
+              style="color: var(--text-dark)"
+            >
+              Prior Authorization & Support
+            </h3>
+            <p class="text-gray-600">
+              Our specialty team handles all insurance verification, prior
+              authorizations, and complex enrollment paperwork, removing the
+              administrative burden from you.
+            </p>
+          </div>
+
+          <!-- Service Card 6: Dedicated Patient Care -->
+          <div
+            class="service-card reveal-item"
+            style="--transition-delay: 0.5s"
+          >
+            <!-- Inline SVG Icon: Headset/Support -->
+            <svg
+              class="service-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 2a10 10 0 0 0-9 5h18a10 10 0 0 0-9-5z"></path>
+              <path d="M3 17a9 9 0 0 0 18 0"></path>
+              <path d="M12 22v-3"></path>
+              <path d="M10 19h4"></path>
+            </svg>
+            <h3
+              class="text-xl font-semibold mb-3"
+              style="color: var(--text-dark)"
+            >
+              24/7 Pharmacist Consults
+            </h3>
+            <p class="text-gray-600">
+              Access to licensed pharmacists 24 hours a day, 7 days a week, for
+              counseling, dosage questions, or managing complex drug
+              interactions with confidence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="stackly-footer reveal-item" id="stackly-footer">
+      <div class="footer-content">
+        <!-- Top Section: Logo, Links, Address, Social -->
+        <div class="footer-top">
+          <!-- 1. Logo/Brand Section -->
+          <div
+            class="logo-section footer-section reveal-item"
+            style="transition-delay: 0.2s"
+          >
+            <img src="./file/logo.webp" alt="" />
+            <p>
+              Your fast track to pharmaceutical delivery. Always reliable,
+              always on time.
+            </p>
+          </div>
+
+          <!-- 2. Quick Links -->
+          <div
+            class="links-section footer-section reveal-item"
+            style="transition-delay: 0.4s"
+          >
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="./home2.html">HOME</a></li>
+              <li><a href="./service.html">SERVICES</a></li>
+              <li><a href="./about2.html">ABOUT</a></li>
+              <li><a href="./blog2.html">BLOG</a></li>
+              <li><a href="./shop.html">SHOP</a></li>
+            </ul>
+          </div>
+
+          <!-- 3. Company Address -->
+          <div
+            class="address-section footer-section reveal-item"
+            style="transition-delay: 0.6s"
+          >
+            <h3>Our Headquarters</h3>
+            <p>
+              <strong>STACKLY Inc.</strong><br />
+              1020 Innovation Drive,<br />
+              New York, NY 10001, USA<br />
+              <br />
+            </p>
+          </div>
+
+          <!-- 4. Social Media Icons -->
+          <div
+            class="social-section footer-section reveal-item"
+            style="transition-delay: 0.8s"
+          >
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="./404.html" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="./404.html" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="./404.html" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="./404.html" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section: Newsletter -->
+        <div class="footer-bottom reveal-item" style="transition-delay: 1s">
+          <h3>
+            <span style="color: var(--text-highlight)">Stay Updated</span> with
+            STACKLY
+          </h3>
+          <p>
+            Subscribe to our newsletter for exclusive offers and health tips.
+          </p>
+          <form class="newsletter-form" action="./404.html">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+
+          <!-- Copyright -->
+          <div class="copyright">
+            &copy; 2025 STACKLY Medicine Delivery. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./nav2.js"></script>
+    <script src="./footer2.js"></script>
+    <script>
+      // --- Scroll-to-Reveal Logic ---
+      function initializeScrollReveal() {
+        // Select all elements tagged for reveal, ensuring we don't re-select 'visible' ones
+        const revealItems = document.querySelectorAll(
+          ".reveal-item:not(.visible)"
+        );
+
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              obs.unobserve(entry.target); // Stop observing once revealed
+            }
+          });
+        }, observerOptions);
+
+        revealItems.forEach((item) => {
+          // Apply optional delay from CSS variable if present
+          const delay = item.style.getPropertyValue("--transition-delay");
+          if (delay) {
+            item.style.transitionDelay = delay;
+          }
+          observer.observe(item);
+        });
+      }
+
+      // --- Initialization on Load ---
+      window.onload = function () {
+        // Apply initial check and setup observer
+        initializeScrollReveal();
+      };
+    </script>
+  </body>
+</html>

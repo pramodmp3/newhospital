@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly - Modern Login</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /*
+         * GLOBAL STYLES & RESET
+         */
+      :root {
+        --color-primary-blue: #0077ff; /* Primary accent blue */
+        --color-secondary-cyan: #00e5ff; /* Secondary bright cyan */
+        --color-dark-purple: #1a0033; /* Deep background dark */
+        --color-dark-blue: #0d1a33; /* Deep background dark blue */
+        --color-text-light: #e0f7fa; /* Light text for dark background */
+        --glass-bg: rgba(255, 255, 255, 0.1); /* Transparent glass background */
+        --glass-border: rgba(255, 255, 255, 0.3); /* Glass border */
+        --shadow-light: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        --shadow-hover: 0 10px 40px 0 rgba(0, 0, 0, 0.5);
+        --shadow-glow: 0 0 15px rgba(0, 119, 255, 0.8);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        /* Animated Gradient Background */
+        background: linear-gradient(
+          -45deg,
+          var(--color-dark-blue),
+          var(--color-dark-purple),
+          #330066,
+          #1a004d
+        );
+        background-size: 400% 400%;
+        animation: gradientShift 15s ease infinite;
+        color: var(--color-text-light);
+        overflow: hidden; /* Hide overflow from floating elements */
+      }
+
+      /*
+         * KEYFRAME ANIMATIONS
+         */
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      @keyframes cardEntry {
+        from {
+          opacity: 0;
+          transform: translateY(50px) scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @keyframes floatShapes {
+        0%,
+        100% {
+          transform: translate(0, 0) rotate(0deg);
+          opacity: 0.8;
+        }
+        25% {
+          transform: translate(50px, -50px) rotate(10deg);
+          opacity: 0.9;
+        }
+        50% {
+          transform: translate(-30px, 80px) rotate(-15deg);
+          opacity: 0.7;
+        }
+        75% {
+          transform: translate(20px, -20px) rotate(5deg);
+          opacity: 0.9;
+        }
+      }
+
+      /*
+         * FLOATING BACKGROUND SHAPES (using a container to hold shapes)
+         */
+      .shapes-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1; /* Below the login card */
+        pointer-events: none;
+      }
+
+      .shape {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.05); /* Very light glass fill */
+        border-radius: 50%; /* Default to circle */
+        backdrop-filter: blur(5px);
+        animation: floatShapes 20s ease-in-out infinite alternate;
+      }
+
+      .shape:nth-child(1) {
+        width: 150px;
+        height: 150px;
+        top: 10%;
+        left: 5%;
+        animation-delay: 0s;
+      }
+      .shape:nth-child(2) {
+        width: 80px;
+        height: 80px;
+        bottom: 15%;
+        right: 10%;
+        animation-delay: 5s;
+      }
+      .shape:nth-child(3) {
+        width: 200px;
+        height: 200px;
+        top: 40%;
+        right: 5%;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Blob shape */
+        animation-delay: 10s;
+      }
+      .shape:nth-child(4) {
+        width: 120px;
+        height: 120px;
+        bottom: 5%;
+        left: 20%;
+        animation-delay: 15s;
+      }
+
+      /*
+         * LOGIN CARD (Glassmorphism)
+         */
+      .login-card {
+        z-index: 10;
+        padding: 40px;
+        width: 90%;
+        max-width: 400px;
+        background: var(--glass-bg);
+        border-radius: 20px;
+        border: 1px solid var(--glass-border);
+        box-shadow: var(--shadow-light);
+        backdrop-filter: blur(15px); /* Key glassmorphism effect */
+        transition: all 0.3s ease-in-out;
+
+        /* Entry Animation */
+        opacity: 0;
+        animation: cardEntry 0.8s ease-out forwards;
+      }
+
+      .login-card:hover {
+        box-shadow: var(--shadow-hover);
+      }
+
+      /*
+         * BRANDING
+         */
+      .brand-logo {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .brand-logo h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        letter-spacing: -1px;
+        /* Text Gradient for Sleek Look */
+        background: linear-gradient(
+          90deg,
+          var(--color-secondary-cyan),
+          var(--color-primary-blue)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 5px rgba(0, 229, 255, 0.5);
+        transition: all 0.4s ease;
+      }
+
+      .brand-logo h1:hover {
+        filter: brightness(1.2);
+        transform: scale(1.02);
+      }
+
+      .brand-logo p {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-top: 5px;
+      }
+
+      /*
+         * FORM STYLING
+         */
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      .form-group input[type="email"],
+      .form-group input[type="password"] {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: rgba(0, 0, 0, 0.2); /* Slightly darker input field */
+        color: var(--color-text-light);
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      /* Placeholder styling */
+      .form-group input::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      /* Input focus effect (Glow) */
+      .form-group input:focus {
+        outline: none;
+        border-color: var(--color-secondary-cyan);
+        box-shadow: var(--shadow-glow);
+      }
+
+      /* Remember Me and Forgot Password Flex container */
+      .form-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        font-size: 0.9rem;
+      }
+
+      /* Remember Me Checkbox */
+      .remember-me {
+        display: flex;
+        align-items: center;
+      }
+
+      .remember-me input[type="checkbox"] {
+        margin-right: 8px;
+        accent-color: var(--color-primary-blue);
+      }
+
+      .forgot-password a {
+        color: var(--color-secondary-cyan);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .forgot-password a:hover {
+        color: white;
+        text-decoration: underline;
+      }
+
+      /* PRIMARY BUTTON */
+      .login-btn {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(
+          90deg,
+          var(--color-secondary-cyan),
+          var(--color-primary-blue)
+        );
+        border: none;
+        border-radius: 8px;
+        color: var(--color-dark-blue);
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 119, 255, 0.4);
+        letter-spacing: 0.5px;
+      }
+
+      /* Button Hover Effect */
+      .login-btn:hover {
+        transform: translateY(-2px) scale(1.01);
+        box-shadow: 0 6px 20px rgba(0, 119, 255, 0.6);
+        filter: brightness(1.1);
+      }
+
+      .login-btn:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 10px rgba(0, 119, 255, 0.4);
+      }
+
+      /* Footer Links */
+      .create-account {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .create-account a {
+        color: var(--color-primary-blue);
+        text-decoration: none;
+        font-weight: 600;
+        margin-left: 5px;
+        transition: color 0.2s ease, text-decoration 0.2s ease;
+      }
+
+      .create-account a:hover {
+        color: var(--color-secondary-cyan);
+        text-decoration: underline;
+      }
+
+      /*
+         * RESPONSIVENESS (Media Queries)
+         */
+      /* Tablet/Desktop adjustments */
+      @media (min-width: 768px) {
+        .login-card {
+          padding: 50px;
+          width: 450px; /* Slightly wider card on tablets/desktop */
+        }
+
+        .brand-logo h1 {
+          font-size: 3rem;
+        }
+
+        /* Adjust floating shapes for larger screen */
+        .shape:nth-child(1) {
+          top: 5%;
+          left: 15%;
+          width: 200px;
+          height: 200px;
+        }
+        .shape:nth-child(2) {
+          bottom: 20%;
+          right: 5%;
+          width: 100px;
+          height: 100px;
+        }
+        .shape:nth-child(3) {
+          top: 25%;
+          right: 15%;
+          width: 250px;
+          height: 250px;
+        }
+        .shape:nth-child(4) {
+          bottom: 10%;
+          left: 30%;
+          width: 150px;
+          height: 150px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Background Animated Shapes Container -->
+    <div class="shapes-container">
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+
+    <!-- Main Login Card -->
+    <div class="login-card">
+      <!-- Branding Section -->
+      <div class="brand-logo">
+        <h1>Stackly</h1>
+        <p>Developer Login Portal</p>
+      </div>
+
+      <!-- Login Form -->
+      <form action="./404.html">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@stackly.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="••••••••"
+            required
+          />
+        </div>
+
+        <div class="form-options">
+          <div class="remember-me">
+            <input type="checkbox" id="remember" name="remember" />
+            <label for="remember">Remember me</label>
+          </div>
+          <div class="forgot-password">
+            <a href="./404.html">Forgot Password?</a>
+          </div>
+        </div>
+
+        <button type="submit" class="login-btn">Log In Securely</button>
+      </form>
+
+      <!-- Create Account Link -->
+      <div class="create-account">
+        Don't have an account?
+        <a href="./signup.html">Create New Account</a>
+      </div>
+    </div>
+  </body>
+</html>

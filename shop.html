@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STACKLY Shop | Order Medicines Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./shop.css" />
+  </head>
+
+  <body>
+    <!-- Header / Fixed Navbar -->
+    <header class="header">
+      <a href="./home2.html" class="logo-link">
+        <div class="logo-img"><img src="./file/logo.webp" alt="" /></div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links-desktop" aria-label="Main Navigation Desktop">
+        <ul class="nav-list-desktop">
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./home2.html" class="nav-link-desktop">HOME</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./index.html">HOME1</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./service.html" class="nav-link-desktop">SERVICES</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./faq.html" class="nav-link-desktop">FAQs</a>
+          </li>
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./about2.html" class="nav-link-desktop">ABOUT</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./about2.html">About US</a></li>
+              <li><a href="./career.html">CAREERS</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./blog2.html" class="nav-link-desktop">BLOG</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./contact2.html" class="nav-link-desktop">CONTACT</a>
+          </li>
+          <li class="nav-item-desktop shop-btn-desktop">
+            <a href="./shop.html" class="shop-btn-link">SHOP</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button
+        class="menu-toggle"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Toggle Navigation"
+      >
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </button>
+    </header>
+
+    <!-- Mobile Slide-in Navigation -->
+    <nav id="mobile-menu" class="nav-mobile" aria-label="Mobile Navigation">
+      <ul class="nav-list-mobile">
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="home-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="home-dropdown"
+            href="./home2.html"
+          >
+            HOME
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="home-dropdown" class="dropdown-mobile">
+            <li><a href="./index.html">HOME1</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./service.html" class="nav-link-mobile">SERVICES</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./faq.html" class="nav-link-mobile">FAQs</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="about-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="about-dropdown"
+            href="./about2.html"
+          >
+            ABOUT
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="about-dropdown" class="dropdown-mobile">
+            <li><a href="./about2.html">About US</a></li>
+            <li><a href="./career.html">CAREERS</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./blog2.html" class="nav-link-mobile">BLOG</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./contact2.html" class="nav-link-mobile">CONTACT</a>
+        </li>
+        <li class="nav-item-mobile">
+          <a href="./shop.html" class="shop-btn-mobile">SHOP</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Overlay for closing the mobile menu -->
+    <div class="overlay"></div>
+    <div class="min-h-screen pt-8 pb-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Title Section -->
+        <header class="text-center mb-12 reveal">
+          <h1
+            class="text-5xl font-extrabold mb-2"
+            style="color: var(--primary-color)"
+          >
+            STACKLY Pharmacy Shop
+          </h1>
+          <p class="text-xl text-gray-600" style="color: salmon">
+            Find the right medication for your needs, delivered with care.
+          </p>
+        </header>
+
+        <!-- Product Catalog -->
+        <section class="reveal">
+          <h2
+            class="text-3xl font-bold mb-6"
+            style="
+              color: var(--primary-color);
+              align-items: center;
+              text-align: center;
+            "
+          >
+            Featured Medicines
+          </h2>
+
+          <!-- Category Filters/Tabs - Updated classes for mobile centering and spacing -->
+          <div
+            id="category-filters"
+            class="flex flex-wrap justify-center sm:justify-start gap-4 mb-8 reveal"
+          >
+            <!-- Buttons injected by JS -->
+          </div>
+
+          <!-- Product Grid -->
+          <div
+            id="product-grid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          >
+            <!-- Product Cards injected by JS -->
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Floating Cart Button -->
+    <a href="cart.html" id="floating-cart-btn" aria-label="Go to Shopping Cart">
+      <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+      <span id="cart-count">0</span>
+    </a>
+    <footer class="stackly-footer reveal-item" id="stackly-footer">
+      <div class="footer-content">
+        <!-- Top Section: Logo, Links, Address, Social -->
+        <div class="footer-top">
+          <!-- 1. Logo/Brand Section -->
+          <div
+            class="logo-section footer-section reveal-item"
+            style="transition-delay: 0.2s"
+          >
+            <img src="./file/logo.webp" alt="" />
+            <p>
+              Your fast track to pharmaceutical delivery. Always reliable,
+              always on time.
+            </p>
+          </div>
+
+          <!-- 2. Quick Links -->
+          <div
+            class="links-section footer-section reveal-item"
+            style="transition-delay: 0.4s"
+          >
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="./home2.html">HOME</a></li>
+              <li><a href="./service.html">SERVICES</a></li>
+              <li><a href="./about2.html">ABOUT</a></li>
+              <li><a href="./blog2.html">BLOG</a></li>
+              <li><a href="./shop.html">SHOP</a></li>
+            </ul>
+          </div>
+
+          <!-- 3. Company Address -->
+          <div
+            class="address-section footer-section reveal-item"
+            style="transition-delay: 0.6s"
+          >
+            <h3>Our Headquarters</h3>
+            <p>
+              <strong>STACKLY Inc.</strong><br />
+              1020 Innovation Drive,<br />
+              New York, NY 10001, USA<br />
+              <br />
+            </p>
+          </div>
+
+          <!-- 4. Social Media Icons -->
+          <div
+            class="social-section footer-section reveal-item"
+            style="transition-delay: 0.8s"
+          >
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="./404.html" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="./404.html" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="./404.html" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="./404.html" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section: Newsletter -->
+        <div class="footer-bottom reveal-item" style="transition-delay: 1s">
+          <h3>
+            <span style="color: var(--text-highlight)">Stay Updated</span> with
+            STACKLY
+          </h3>
+          <p>
+            Subscribe to our newsletter for exclusive offers and health tips.
+          </p>
+          <form class="newsletter-form" action="./404.html">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+
+          <!-- Copyright -->
+          <div class="copyright">
+            &copy; 2025 STACKLY Medicine Delivery. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./nav2.js"></script>
+    <script src="./footer2.js"></script>
+    <script>
+      lucide.createIcons();
+
+      // --- Data Setup ---
+      const CART_STORAGE_KEY = "stacklyCart";
+
+      const productData = [
+        {
+          id: 101,
+          name: "Vita-Onco Boost",
+          category: "Oncology",
+          price: 129.99,
+          description:
+            "Advanced formulation for supportive oncology care and vital recovery.",
+          color: "7f00ff",
+          image: "./file/products/i11.webp",
+        },
+        {
+          id: 102,
+          name: "ChemoGuard Tablets",
+          category: "Oncology",
+          price: 215.5,
+          description:
+            "Prescription medication to manage certain chemotherapy side effects.",
+          color: "e100ff",
+          image: "./file/products/i7.webp",
+        },
+        {
+          id: 201,
+          name: "OrthoFlex 1000",
+          category: "Orthopedics",
+          price: 45.75,
+          description:
+            "High-potency joint support supplement for mobility and comfort.",
+          color: "ff6f61",
+          image: "./file/products/i6.webp",
+        },
+        {
+          id: 202,
+          name: "Bone Density Formula",
+          category: "Orthopedics",
+          price: 62.9,
+          description:
+            "Essential minerals and vitamins to support strong bone health.",
+          color: "ffb347",
+          image: "./file/products/i5.webp",
+        },
+        {
+          id: 301,
+          name: "NeuroCalm XR",
+          category: "Neurology",
+          price: 98.0,
+          description:
+            "Extended-release capsule for nerve pain management and relaxation.",
+          color: "00d4ff",
+          image: "./file/products/i4.webp",
+        },
+        {
+          id: 302,
+          name: "Cognito Max",
+          category: "Neurology",
+          price: 79.99,
+          description:
+            "Nootropic blend designed to enhance focus and cognitive function.",
+          color: "00b3ff",
+          image: "./file/products/i3.webp",
+        },
+        {
+          id: 401,
+          name: "CardioPulse Tabs",
+          category: "Cardiology",
+          price: 155.2,
+          description:
+            "Regulated dosage for daily cardiovascular rhythm support.",
+          color: "ff6f61",
+          image: "./file/products/i2.webp",
+        },
+        {
+          id: 402,
+          name: "Hypertension Shield",
+          category: "Cardiology",
+          price: 88.5,
+          description:
+            "A diuretic medication used to treat high blood pressure.",
+          color: "ffd700",
+          image: "./file/products/i1.webp",
+        },
+      ];
+
+      // --- DOM Elements ---
+      const productGrid = document.getElementById("product-grid");
+      const filtersContainer = document.getElementById("category-filters");
+      const cartCountEl = document.getElementById("cart-count");
+
+      // --- Cart Management (uses LocalStorage) ---
+
+      /** Retrieves cart from LocalStorage. */
+      function getCart() {
+        const storedCart = localStorage.getItem(CART_STORAGE_KEY);
+        return storedCart ? JSON.parse(storedCart) : [];
+      }
+
+      /** Saves cart to LocalStorage. */
+      function saveCart(cart) {
+        localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+        updateCartCount();
+      }
+
+      /** Updates the floating cart count display. */
+      function updateCartCount() {
+        const cart = getCart();
+        const totalItems = cart.reduce(
+          (total, item) => total + item.quantity,
+          0
+        );
+        cartCountEl.textContent = totalItems;
+        cartCountEl.style.display = totalItems > 0 ? "flex" : "none";
+      }
+
+      /** Adds a product to the cart or increments quantity. */
+      function addToCart(productId) {
+        const cart = getCart();
+        const product = productData.find((p) => p.id === productId);
+        if (!product) return;
+
+        const existingItem = cart.find((item) => item.id === productId);
+
+        if (existingItem) {
+          existingItem.quantity += 1;
+        } else {
+          cart.push({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            description: product.description,
+            color: product.color,
+            quantity: 1,
+          });
+        }
+        saveCart(cart);
+      }
+
+      // --- Rendering ---
+
+      /** Renders all product cards based on the active filter. */
+      function renderProductCards(filterCategory = "All") {
+        productGrid.innerHTML = "";
+        const filteredProducts =
+          filterCategory === "All"
+            ? productData
+            : productData.filter((p) => p.category === filterCategory);
+
+        filteredProducts.forEach((product, index) => {
+          const card = document.createElement("div");
+          card.className = `product-card bg-white rounded-xl p-5 flex flex-col items-center text-center reveal`;
+          card.style.setProperty("--i", index);
+
+          // Determine border color based on category
+          let borderColor = "var(--primary-color)";
+          if (product.category === "Orthopedics") {
+            borderColor = "var(--secondary-color)";
+          } else if (product.category === "Neurology") {
+            borderColor = "var(--accent-color)";
+          } else if (product.category === "Cardiology") {
+            borderColor = "var(--text-highlight)";
+          }
+          card.style.borderTop = `4px solid ${borderColor}`;
+
+          // Image Placeholder HTML
+          const imagePlaceholderUrl = `https://placehold.co/200x120/${
+            product.color
+          }/ffffff?text=${product.category.substring(0, 3).toUpperCase()}-Pill`;
+          const imageHtml = `
+    <div class="mb-4 w-full overflow-hidden rounded-lg shadow-inner"
+         style="border: 2px solid ${borderColor};">
+
+        <img src="${product.image || ""}"
+             alt="${product.name}"
+             class="w-full h-auto object-cover transition duration-300 hover:scale-[1.05]"
+             style="aspect-ratio: 5/3;"
+             onerror="this.onerror=null; this.src='https://placehold.co/200x120/${
+               product.color
+             }/ffffff?text=No+Image';"
+        />
+    </div>
+`;
+
+          const priceHtml = `<span class="text-3xl font-extrabold mt-2" style="color: var(--text-highlight);">$${product.price.toFixed(
+            2
+          )}</span>`;
+
+          card.innerHTML = `
+            ${imageHtml}
+            <h3 class="text-xl font-bold mb-1" style="color: #${product.color};">${product.name}</h3>
+            <p class="text-sm text-gray-500 mb-3">${product.category}</p>
+            <p class="text-gray-700 mb-4 text-sm flex-grow">${product.description}</p>
+            <div class="mt-auto w-full">
+                ${priceHtml}
+                <button data-id="${product.id}" class="add-to-cart-btn w-full mt-4">
+                    <i data-lucide="plus" class="w-4 h-4 inline mr-2"></i> Add to Cart
+                </button>
+            </div>
+        `;
+
+          productGrid.appendChild(card);
+        });
+        lucide.createIcons();
+        checkScrollReveal();
+      }
+
+      /** Renders the category filter buttons and sets up click handlers. */
+      function renderFilters() {
+        const categories = [
+          "All",
+          ...new Set(productData.map((p) => p.category)),
+        ];
+        filtersContainer.innerHTML = "";
+
+        categories.forEach((category) => {
+          const button = document.createElement("button");
+          button.textContent = category;
+          button.className = "tab-button text-gray-700 border border-gray-300";
+          button.setAttribute("data-category", category);
+
+          button.addEventListener("click", () => {
+            document
+              .querySelectorAll(".tab-button")
+              .forEach((btn) =>
+                btn.classList.remove(
+                  "active",
+                  "bg-white",
+                  "text-gray-700",
+                  "border-gray-300"
+                )
+              );
+            button.classList.add("active");
+            renderProductCards(category);
+          });
+
+          filtersContainer.appendChild(button);
+        });
+
+        const allButton = filtersContainer.querySelector(
+          '[data-category="All"]'
+        );
+        if (allButton) allButton.classList.add("active");
+      }
+
+      // --- Event Listeners ---
+      productGrid.addEventListener("click", (e) => {
+        const button = e.target.closest(".add-to-cart-btn");
+        if (button) {
+          const productId = parseInt(button.dataset.id);
+          addToCart(productId);
+        }
+      });
+
+      // --- Scroll Reveal Logic (Duplicated for both files) ---
+      const revealElements = document.querySelectorAll(".reveal");
+
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      function checkScrollReveal() {
+        document
+          .querySelectorAll(".reveal:not(.visible)")
+          .forEach((element) => {
+            observer.observe(element);
+          });
+      }
+
+      // --- Initialization ---
+      document.addEventListener("DOMContentLoaded", () => {
+        renderFilters();
+        renderProductCards("All");
+        updateCartCount(); // Load initial cart count
+        checkScrollReveal();
+      });
+    </script>
+  </body>
+</html>

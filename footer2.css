@@ -1,0 +1,353 @@
+/* =========================================
+           1. CSS Variables and Base Styling
+========================================= */
+:root {
+  --primary-color: #7f00ff; /* Vibrant Purple */
+  --secondary-color: #ff6f61; /* Coral / Warm Orange */
+  --accent-color: #00d4ff; /* Electric Cyan */
+  --footer-bg: #1f2937; /* Deep Slate / Blue-Grey */
+  --text-light: #f9fafb; /* Soft White */
+  --text-dark: #1e293b; /* Dark Slate for readability */
+  --text-highlight: #ffd700; /* Bright Gold / Amber for highlights */
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --shadow-dark: rgba(0, 0, 0, 0.35);
+  --transition-speed: 0.3s;
+
+  /* Gradient colors */
+  --gradient-primary: linear-gradient(135deg, #7f00ff, #e100ff);
+  --gradient-secondary: linear-gradient(135deg, #ff6f61, #ffb347);
+  --gradient-accent: linear-gradient(45deg, #00d4ff, #00b3ff);
+  --gradient-button: linear-gradient(135deg, #ff6f61, #ffb347, #ffd700);
+}
+
+/* Base body */
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f5;
+}
+
+.content-placeholder {
+  flex-grow: 1;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* =========================================
+           2. Footer Container & Animation
+========================================= */
+.stackly-footer {
+  background-color: var(--footer-bg);
+  color: var(--text-light);
+  padding: 60px 20px 20px;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.stackly-footer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: var(--gradient-primary);
+  opacity: 0.1;
+  filter: blur(100px);
+  animation: moveGradient 20s linear infinite alternate;
+  z-index: 0;
+}
+
+@keyframes moveGradient {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(20px, 40px) rotate(360deg);
+  }
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* default center on mobile */
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================
+           3. Footer Top Grid
+========================================= */
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Headings */
+.footer-section h3 {
+  font-size: 1.25rem;
+  color: var(--text-highlight);
+  margin-bottom: 15px;
+  border-left: 3px solid var(--accent-color);
+  padding-left: 10px;
+}
+
+/* =========================================
+           4. Logo & Links
+========================================= */
+/* =========================================
+       Footer Logo Section
+========================================= */
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center on mobile */
+  text-align: center;
+  gap: 10px;
+}
+
+.logo-section img {
+  max-width: 150px; /* adjust logo size */
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-section p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.5;
+  max-width: 250px;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+
+/* Optional reveal animation delay */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal-item.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Desktop adjustments */
+@media (min-width: 768px) {
+  .logo-section {
+    align-items: flex-start; /* align left on desktop */
+    text-align: left;
+  }
+
+  .logo-section p {
+    max-width: 300px;
+    margin: 0; /* align with logo */
+  }
+}
+
+.links-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* default center on mobile */
+  gap: 8px;
+}
+
+.links-section ul li a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease,
+    transform var(--transition-speed) ease;
+}
+
+.links-section ul li a:hover {
+  color: var(--secondary-color);
+  transform: translateX(5px);
+}
+
+/* =========================================
+           5. Address Section
+========================================= */
+.address-section p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+.address-section strong {
+  color: var(--text-highlight);
+  font-weight: 600;
+}
+
+/* =========================================
+           6. Social Icons
+========================================= */
+.social-icons {
+  display: flex;
+  justify-content: center; /* default center */
+  gap: 15px;
+}
+
+.social-icons a {
+  color: var(--text-light);
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all var(--transition-speed) ease;
+}
+
+.social-icons a:hover {
+  background: var(--gradient-primary);
+  color: var(--text-light);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 15px var(--primary-color);
+}
+
+/* =========================================
+           7. Newsletter Section
+========================================= */
+.footer-bottom {
+  padding-top: 30px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.newsletter-form input {
+  flex-grow: 1;
+  padding: 12px 15px;
+  border: none;
+  background: transparent;
+  color: var(--text-dark);
+  font-size: 1rem;
+  border-radius: 8px;
+  outline: none;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  color: var(--text-light);
+  cursor: pointer;
+  background: var(--gradient-button);
+  background-size: 300% 300%;
+  transition: all var(--transition-speed) ease;
+}
+
+.newsletter-form button:hover {
+  opacity: 0.9;
+  transform: scale(0.98);
+}
+
+/* =========================================
+           8. Copyright
+========================================= */
+.copyright {
+  margin-top: 30px;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* =========================================
+           9. Scroll-to-Reveal State
+========================================= */
+.reveal-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* =========================================
+           10. Media Queries
+========================================= */
+
+/* Mobile: stack all footer content & center */
+@media (max-width: 767px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .links-section ul {
+    align-items: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
+/* Desktop: flex-start alignment */
+@media (min-width: 768px) {
+  .footer-top {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: flex-start;
+    gap: 50px;
+  }
+
+  .links-section ul {
+    align-items: flex-start;
+  }
+
+  .social-icons {
+    justify-content: flex-start;
+  }
+
+  .newsletter-form {
+    flex-direction: row;
+  }
+}

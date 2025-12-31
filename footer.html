@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly HOSPITALS Footer</title>
+    <!-- Importing a professional, modern font (Inter) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Using Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./footer.css" />
+  </head>
+  <body>
+    <main>
+      <h1 style="color: var(--color-primary-blue)">Stackly HOSPITALS</h1>
+      <p>Main content area above the footer.</p>
+      <p style="margin-top: 50vh">Scroll down to see the animated footer.</p>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- 1. Logo & Branding -->
+        <div class="footer-section branding">
+          <a href="./index.html" class="brand-footer">
+            <img src="./assets/logo.webp" alt="" />
+          </a>
+          <p class="brand-tagline">
+            Pioneering healthcare through innovation and compassion, delivering
+            tomorrow's patient care, today.
+          </p>
+          <div class="social-icons">
+            <a href="./404.html" class="social-icon" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- 2. Quick Links -->
+        <div class="footer-section quick-links">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./spect.html">SPECIALITIES</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./blog.html">BLOG</a></li>
+            <li><a href="./dash.html">DASHBOARD</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Address Section -->
+        <div class="footer-section footer-address">
+          <h4>Contact & Address</h4>
+          <p>
+            <i class="fas fa-location-dot"></i>
+            Level 10, Innovation Tower, Cyber City, Stacklyville 90210
+          </p>
+          <p>
+            <i class="fas fa-phone"></i>
+            (800) 555-0199
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i>
+            info@stacklyhospitals.com
+          </p>
+        </div>
+
+        <!-- 4. Newsletter Subscription -->
+        <div class="footer-section newsletter">
+          <h4>Stay Updated</h4>
+          <p>
+            Subscribe to our newsletter for the latest healthcare news and
+            research breakthroughs.
+          </p>
+          <form class="newsletter-form" action="./404.html">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              required
+              class="newsletter-input"
+              id="newsletter-email"
+            />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; <span id="current-year"></span> Stackly HOSPITALS. All rights
+        reserved. | Privacy Policy | Terms of Service
+      </div>
+    </footer>
+    <script src="./footer.js"></script>
+  </body>
+</html>

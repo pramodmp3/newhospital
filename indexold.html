@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly Hospitals | Home</title>
+    <!-- Importing a professional, modern font (Inter) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Using Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Linking the external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <!-- Logo and Brand -->
+        <a href="./index.html" class="brand">
+          <div class="brand-logo"></div>
+          <img src="./assets/logo.webp" alt="" />
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links">
+          <!-- HOME (With Dropdown) -->
+          <li class="has-dropdown">
+            <!-- Added dropdown indicator icon -->
+            <a href="./index.html" class="nav-link" data-id="home-link">
+              HOME
+              <i class="fas fa-chevron-down nav-dropdown-icon"></i>
+            </a>
+            <ul class="dropdown" data-dropdown-id="home">
+              <li><a href="./home2.html">HOME2</a></li>
+            </ul>
+          </li>
+          <!-- SPECIALITIES (With Dropdown) -->
+          <li class="has-dropdown">
+            <!-- Added dropdown indicator icon -->
+            <a href="./spect.html" class="nav-link" data-id="specialities-link">
+              SPECIALITIES
+              <i class="fas fa-chevron-down nav-dropdown-icon"></i>
+            </a>
+            <ul class="dropdown" data-dropdown-id="specialities">
+              <li><a href="./card.html"> Cardiology</a></li>
+              <li><a href="./neu.html"> Neurology</a></li>
+              <li><a href="./orth.html"> Orthopedics</a></li>
+              <li><a href="./onco.html"> Oncology</a></li>
+            </ul>
+          </li>
+          <!-- Simple Links -->
+          <li><a href="./about.html" class="nav-link">ABOUT</a></li>
+          <li><a href="./blog.html" class="nav-link">BLOG</a></li>
+          <li><a href="./dash.html" class="nav-link">DASHBOARD</a></li>
+          <li><a href="./contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
+
+        <!-- Desktop Login Button -->
+        <div class="nav-actions">
+          <a href="./login.html"><button class="login-btn">LOGIN</button></a>
+        </div>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <i class="fas fa-bars" id="menu-icon"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Full-Screen Menu -->
+    <ul class="mobile-nav-menu" id="mobile-menu">
+      <!-- HOME (With Dropdown) -->
+      <li>
+        <div class="mobile-dropdown-container">
+          <a href="./index.html" class="nav-link">HOME</a>
+          <button
+            class="mobile-dropdown-toggle"
+            data-target="mobile-home-dropdown"
+            aria-expanded="false"
+          >
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <ul class="mobile-dropdown" id="mobile-home-dropdown">
+          <li><a href="./home2.html">HOME2</a></li>
+        </ul>
+      </li>
+      <!-- SPECIALITIES (With Dropdown) -->
+      <li>
+        <div class="mobile-dropdown-container">
+          <a href="./spect.html" class="nav-link">SPECIALITIES</a>
+          <button
+            class="mobile-dropdown-toggle"
+            data-target="mobile-specialities-dropdown"
+            aria-expanded="false"
+          >
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <ul class="mobile-dropdown" id="mobile-specialities-dropdown">
+          <li><a href="./card.html"> Cardiology</a></li>
+          <li><a href="./neu.html"> Neurology</a></li>
+          <li><a href="./orth.html"> Orthopedics</a></li>
+          <li><a href="./onco.html">Oncology</a></li>
+        </ul>
+      </li>
+      <!-- Simple Links -->
+      <li><a href="./about.html" class="nav-link">ABOUT</a></li>
+      <li><a href="./blog.html" class="nav-link">BLOG</a></li>
+      <li><a href="./dash.html" class="nav-link">DASHBOARD</a></li>
+      <li><a href="./contact.html" class="nav-link">CONTACT</a></li>
+
+      <!-- Mobile Login Button -->
+      <div class="login-btn-mobile">
+        <a href="./login.html"
+          ><button class="login-btn" style="width: 100%">LOGIN</button></a
+        >
+      </div>
+    </ul>
+    <!-- FLOATING BLURRED BLOB BACKGROUND CONTAINER (Optional but included for dynamic look) -->
+    <div class="blob-bg">
+      <span class="blob"></span>
+      <span class="blob"></span>
+      <span class="blob"></span>
+      <span class="blob"></span>
+    </div>
+
+    <main class="page-container">
+      <!-- 1. Hero Section -->
+      <section class="hero-section" id="hero">
+        <!-- Infinite Scrolling Background Images -->
+        <div class="hero-carousel">
+          <!-- Image Placeholders (Styled as background images in CSS for src) -->
+          <div
+            class="hero-image"
+            style="background-image: url('./assets/hero1.webp')"
+          ></div>
+          <div
+            class="hero-image"
+            style="background-image: url('./assets/hero2.webp')"
+          ></div>
+          <div
+            class="hero-image"
+            style="background-image: url('./assets/hero3.webp')"
+          ></div>
+          <div
+            class="hero-image"
+            style="background-image: url('./assets/hero4.webp')"
+          ></div>
+          <!-- Duplicate first image to create seamless loop transition -->
+          <div
+            class="hero-image"
+            style="background-image: url('./assets/hero1.webp')"
+          ></div>
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <!-- Hero Content -->
+        <div class="hero-content animated-section">
+          <h1>Welcome to Stackly Hospitals</h1>
+          <p>
+            Pioneering the future of healthcare with compassionate care and
+            world-class medical innovation. Your health is our priority.
+          </p>
+          <a href="#appointment-form" class="cta-btn">Book Appointment</a>
+        </div>
+      </section>
+
+      <!-- 2. Why Choose Us Section -->
+      <section class="animated-section" id="features">
+        <h2>Why Choose Stackly Hospitals?</h2>
+        <div class="features-grid">
+          <article class="feature-card">
+            <i class="fas fa-microscope"></i>
+            <h3>Cutting-Edge Technology</h3>
+            <p>
+              We invest in the latest diagnostic and surgical equipment to
+              ensure precision and superior patient outcomes.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <i class="fas fa-user-md"></i>
+            <h3>Leading Specialists</h3>
+            <p>
+              Our team consists of board-certified physicians and specialists
+              recognized globally for their expertise and research.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Compassionate Care</h3>
+            <p>
+              We treat every patient with dignity and empathy, providing
+              personalized care plans for the entire healing journey.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Accredited Excellence</h3>
+            <p>
+              Fully accredited and continuously striving to exceed national
+              standards for patient safety and quality of care.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. Services Section -->
+      <section class="animated-section" id="services">
+        <h2>Our Specialized Services</h2>
+        <div class="services-grid">
+          <article class="service-card">
+            <img src="./assets/cr1.webp" alt="Cardiology" />
+            <div class="service-content">
+              <h3>Cardiology</h3>
+              <p>
+                Advanced heart diagnostics and treatments for complex cardiac
+                conditions.
+              </p>
+              <a href="card.html">Learn More</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="./assets/on1.webp" alt="Oncology" />
+            <div class="service-content">
+              <h3>Oncology</h3>
+              <p>
+                Personalized cancer treatment plans using the latest radiation
+                and immune therapies.
+              </p>
+              <a href="onco.html">Learn More</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="./assets/or1.webp" alt="Orthopedics" />
+            <div class="service-content">
+              <h3>Orthopedics</h3>
+              <p>
+                Restoring mobility through expert joint replacement, spine, and
+                sports medicine and cure.
+              </p>
+              <a href="orth.html">Learn More</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="./assets/neu1.webp" alt="Neurology" />
+            <div class="service-content">
+              <h3>Neurology</h3>
+              <p>
+                Comprehensive care for the brain and nervous system, from stroke
+                to movement disorders.
+              </p>
+              <a href="neu.html">Learn More</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 4. Patients Review Section (Infinite Horizontal Scroll) -->
+      <section class="animated-section" id="reviews">
+        <div class="reviews-container">
+          <h2>What Our Patients Say</h2>
+
+          <!-- Wrapper containing two copies of the content for infinite loop -->
+          <div class="reviews-wrapper">
+            <!-- Review Content Set 1 -->
+            <div class="reviews-content">
+              <article class="review-card">
+                <div class="review-header">
+                  <img src="./assets/m1.webp" alt="Patient 1" />
+                  <h4>Sarah J.</h4>
+                </div>
+                <p class="review-text">
+                  "The Orthopedics team gave me my life back after knee surgery.
+                  The care was impeccable and the facility is stunningly
+                  modern."
+                </p>
+              </article>
+
+              <article class="review-card">
+                <div class="review-header">
+                  <img src="./assets/m2.webp" alt="Patient 2" />
+                  <h4>Mark K.</h4>
+                </div>
+                <p class="review-text">
+                  "I was deeply impressed by the Oncology department's
+                  dedication. They handled my treatment with the utmost
+                  professionalism and kindness."
+                </p>
+              </article>
+
+              <article class="review-card">
+                <div class="review-header">
+                  <img src="./assets/m3.webp" alt="Patient 3" />
+                  <h4>Linda R.</h4>
+                </div>
+                <p class="review-text">
+                  "Stackly's Cardiology unit is unmatched. The advanced
+                  diagnostics were swift and the doctors explained everything
+                  clearly."
+                </p>
+              </article>
+
+              <article class="review-card">
+                <div class="review-header">
+                  <img src="./assets/m4.webp" alt="Patient 4" />
+                  <h4>David M.</h4>
+                </div>
+                <p class="review-text">
+                  "Fast, efficient, and friendly staff. Getting an appointment
+                  was easy, and the Neurology consultation was extremely
+                  thorough."
+                </p>
+              </article>
+
+              <article class="review-card">
+                <div class="review-header">
+                  <img src="./assets/m5.webp" alt="Patient 5" />
+                  <h4>Grace L.</h4>
+                </div>
+                <p class="review-text">
+                  "A truly futuristic hospital. The entire environment is
+                  designed for healing and recovery. Highly recommend their
+                  specialty care."
+                </p>
+              </article>
+            </div>
+
+            <!-- Review Content Set 2 (Duplicated for Seamless Loop) -->
+            <div class="reviews-content" aria-hidden="true">
+              <article class="review-card">
+                <div class="review-header">
+                  <img src="./assets/m1.webp" alt="Patient 1" />
+                  <h4>Sarah J.</h4>
+                </div>
+                <p class="review-text">
+                  "The Orthopedics team gave me my life back after knee surgery.
+                  The care was impeccable and the facility is stunningly
+                  modern."
+                </p>
+              </article>
+
+              <article class="review-card">
+                <div class="review-header">
+                  <img src="./assets/m2.webp" alt="Patient 2" />
+                  <h4>Mark K.</h4>
+                </div>
+                <p class="review-text">
+                  "I was deeply impressed by the Oncology department's
+                  dedication. They handled my treatment with the utmost
+                  professionalism and kindness."
+                </p>
+              </article>
+
+              <article class="review-card">
+                <div class="review-header">
+                  <img src="./assets/m3.webp" alt="Patient 3" />
+                  <h4>Linda R.</h4>
+                </div>
+                <p class="review-text">
+                  "Stackly's Cardiology unit is unmatched. The advanced
+                  diagnostics were swift and the doctors explained everything
+                  clearly."
+                </p>
+              </article>
+
+              <article class="review-card">
+                <div class="review-header">
+                  <img src="./assets/m4.webp" alt="Patient 4" />
+                  <h4>David M.</h4>
+                </div>
+                <p class="review-text">
+                  "Fast, efficient, and friendly staff. Getting an appointment
+                  was easy, and the Neurology consultation was extremely
+                  thorough."
+                </p>
+              </article>
+
+              <article class="review-card">
+                <div class="review-header">
+                  <img src="./assets/m5.webp" alt="Patient 5" />
+                  <h4>Grace L.</h4>
+                </div>
+                <p class="review-text">
+                  "A truly futuristic hospital. The entire environment is
+                  designed for healing and recovery. Highly recommend their
+                  specialty care."
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Appointment Booking Form -->
+      <section
+        class="animated-section appointment-form-section"
+        id="appointment-form"
+      >
+        <h2>Request an Appointment</h2>
+        <p>
+          Fill out the form below and one of our dedicated coordinators will
+          contact you shortly to confirm your booking.
+        </p>
+
+        <div class="appointment-form-container">
+          <form action="./404.html">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                class="form-input"
+                placeholder="Full Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                class="form-input"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="tel"
+                id="phone"
+                class="form-input"
+                placeholder="Phone Number"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <select id="department" class="form-select" required>
+                <option value="" disabled selected>Select Department</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Oncology">Oncology</option>
+                <option value="Orthopedics">Orthopedics</option>
+                <option value="Neurology">Neurology</option>
+                <option value="General">General Practice</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                class="form-input"
+                placeholder="Your Message"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="cta-btn" style="width: 100%">
+              Book Appointment
+            </button>
+            <div
+              id="form-message"
+              style="margin-top: 1rem; color: var(--color-secondary-cyan)"
+            ></div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- 1. Logo & Branding -->
+        <div class="footer-section branding">
+          <a href="./index.html" class="brand-footer">
+            <img src="./assets/logo.webp" alt="" />
+          </a>
+          <p class="brand-tagline">
+            Pioneering healthcare through innovation and compassion, delivering
+            tomorrow's patient care, today.
+          </p>
+          <div class="social-icons">
+            <a href="./404.html" class="social-icon" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- 2. Quick Links -->
+        <div class="footer-section quick-links">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./spect.html">SPECIALITIES</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./blog.html">BLOG</a></li>
+            <li><a href="./dash.html">DASHBOARD</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Address Section -->
+        <div class="footer-section footer-address">
+          <h4>Contact & Address</h4>
+          <p>
+            <i class="fas fa-location-dot"></i>
+            Level 10, Innovation Tower, Cyber City, Stacklyville 90210
+          </p>
+          <p>
+            <i class="fas fa-phone"></i>
+            (800) 555-0199
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i>
+            info@stacklyhospitals.com
+          </p>
+        </div>
+
+        <!-- 4. Newsletter Subscription -->
+        <div class="footer-section newsletter">
+          <h4>Stay Updated</h4>
+          <p>
+            Subscribe to our newsletter for the latest healthcare news and
+            research breakthroughs.
+          </p>
+          <form class="newsletter-form" action="./404.html">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              required
+              class="newsletter-input"
+              id="newsletter-email"
+            />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; <span id="current-year"></span> Stackly HOSPITALS. All rights
+        reserved. | Privacy Policy | Terms of Service
+      </div>
+    </footer>
+    <script src="./nav.js"></script>
+    <script src="./footer.js"></script>
+    <script>
+      /*
+        --------------------------------------------------------
+        JAVASCRIPT LOGIC
+        --------------------------------------------------------
+        Handles section slide-in on scroll and form submission simulation.
+        */
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // --- 1. Intersection Observer for Slide-in Animations ---
+        const sections = document.querySelectorAll(".animated-section");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.2,
+          }
+        );
+
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+
+        // --- 2. Form Submission Handler (Animated Feedback) ---
+        window.handleAppointmentSubmit = function (event) {
+          event.preventDefault();
+
+          const form = event.target;
+          const submitButton = form.querySelector(".cta-btn");
+          const formMessage = document.getElementById("form-message");
+
+          // Simulate form data
+          const name = document.getElementById("name").value;
+          const dept = document.getElementById("department").value;
+
+          // Disable button and change text temporarily
+          const originalText = submitButton.textContent;
+          submitButton.textContent = "Processing...";
+          submitButton.disabled = true;
+
+          // Simulate API call delay
+          setTimeout(() => {
+            // Display success message
+            formMessage.innerHTML = `<i class="fas fa-check-circle"></i> Thank you, ${name}! Your ${dept} appointment request has been submitted. A coordinator will call you soon.`;
+
+            // Reset button and form state
+            submitButton.textContent = "Request Sent!";
+
+            setTimeout(() => {
+              submitButton.textContent = originalText;
+              submitButton.disabled = false;
+              formMessage.innerHTML = "";
+              form.reset(); // Clear the form
+            }, 4000);
+          }, 1500); // 1.5 second simulated delay
+        };
+      });
+    </script>
+  </body>
+</html>

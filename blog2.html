@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STACKLY Blog - Specialized Medicine Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./blog2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Inter Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header / Fixed Navbar -->
+    <header class="header">
+      <a href="./home2.html" class="logo-link">
+        <div class="logo-img"><img src="./file/logo.webp" alt="" /></div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links-desktop" aria-label="Main Navigation Desktop">
+        <ul class="nav-list-desktop">
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./home2.html" class="nav-link-desktop">HOME</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./index.html">HOME1</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./service.html" class="nav-link-desktop">SERVICES</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./faq.html" class="nav-link-desktop">FAQs</a>
+          </li>
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./about2.html" class="nav-link-desktop">ABOUT</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./about2.html">About US</a></li>
+              <li><a href="./career.html">CAREERS</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./blog2.html" class="nav-link-desktop">BLOG</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./contact2.html" class="nav-link-desktop">CONTACT</a>
+          </li>
+          <li class="nav-item-desktop shop-btn-desktop">
+            <a href="./shop.html" class="shop-btn-link">SHOP</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button
+        class="menu-toggle"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Toggle Navigation"
+      >
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </button>
+    </header>
+
+    <!-- Mobile Slide-in Navigation -->
+    <nav id="mobile-menu" class="nav-mobile" aria-label="Mobile Navigation">
+      <ul class="nav-list-mobile">
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="home-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="home-dropdown"
+            href="./home2.html"
+          >
+            HOME
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="home-dropdown" class="dropdown-mobile">
+            <li><a href="./index.html">HOME1</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./service.html" class="nav-link-mobile">SERVICES</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./faq.html" class="nav-link-mobile">FAQs</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="about-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="about-dropdown"
+            href="./about2.html"
+          >
+            ABOUT
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="about-dropdown" class="dropdown-mobile">
+            <li><a href="./about2.html">About US</a></li>
+            <li><a href="./career.html">CAREERS</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./blog2.html" class="nav-link-mobile">BLOG</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./contact2.html" class="nav-link-mobile">CONTACT</a>
+        </li>
+        <li class="nav-item-mobile">
+          <a href="./shop.html" class="shop-btn-mobile">SHOP</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Overlay for closing the mobile menu -->
+    <div class="overlay"></div>
+    <!-- Header & Hero Section -->
+    <header id="hero" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 shadow-2xl">
+      <div class="hero-shape shape-1"></div>
+      <div class="hero-shape shape-2"></div>
+      <div class="hero-shape shape-3"></div>
+      <div class="hero-shape shape-4"></div>
+
+      <div class="max-w-6xl mx-auto text-center relative z-10">
+        <h1 class="text-5xl sm:text-7xl font-extrabold mb-4 tracking-tight">
+          The <span class="text-white">STACKLY</span>
+          <span class="text-xl sm:text-4xl" style="color: var(--text-highlight)"
+            >BLOG</span
+          >
+        </h1>
+        <p class="text-lg sm:text-2xl font-light mt-4 opacity-90">
+          Insights and Innovations in Specialized E-Commerce Medicine Delivery.
+        </p>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <!-- Category Filter Tabs -->
+      <div
+        class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-10 reveal-item"
+        id="category-filters"
+      >
+        <button class="category-tab active py-2 px-4" data-category="All">
+          All Categories
+        </button>
+        <button class="category-tab py-2 px-4" data-category="Oncology">
+          Oncology
+        </button>
+        <button class="category-tab py-2 px-4" data-category="Orthopedics">
+          Orthopedics
+        </button>
+        <button class="category-tab py-2 px-4" data-category="Neurology">
+          Neurology
+        </button>
+        <button class="category-tab py-2 px-4" data-category="Cardiology">
+          Cardiology
+        </button>
+      </div>
+
+      <!-- Blog Post Grid -->
+      <div
+        id="blog-grid"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <!-- Blog posts will be injected here by JavaScript -->
+      </div>
+
+      <!-- Load More Button -->
+      <div id="load-more-container">
+        <button
+          id="load-more-btn"
+          class="read-more-btn py-3 px-8 text-lg reveal-item"
+        >
+          Load More Articles
+        </button>
+      </div>
+    </main>
+
+    <footer class="stackly-footer reveal-item" id="stackly-footer">
+      <div class="footer-content">
+        <!-- Top Section: Logo, Links, Address, Social -->
+        <div class="footer-top">
+          <!-- 1. Logo/Brand Section -->
+          <div
+            class="logo-section footer-section reveal-item"
+            style="transition-delay: 0.2s"
+          >
+            <img src="./file/logo.webp" alt="" />
+            <p>
+              Your fast track to pharmaceutical delivery. Always reliable,
+              always on time.
+            </p>
+          </div>
+
+          <!-- 2. Quick Links -->
+          <div
+            class="links-section footer-section reveal-item"
+            style="transition-delay: 0.4s"
+          >
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="./home2.html">HOME</a></li>
+              <li><a href="./service.html">SERVICES</a></li>
+              <li><a href="./about2.html">ABOUT</a></li>
+              <li><a href="./blog2.html">BLOG</a></li>
+              <li><a href="./shop.html">SHOP</a></li>
+            </ul>
+          </div>
+
+          <!-- 3. Company Address -->
+          <div
+            class="address-section footer-section reveal-item"
+            style="transition-delay: 0.6s"
+          >
+            <h3>Our Headquarters</h3>
+            <p>
+              <strong>STACKLY Inc.</strong><br />
+              1020 Innovation Drive,<br />
+              New York, NY 10001, USA<br />
+              <br />
+            </p>
+          </div>
+
+          <!-- 4. Social Media Icons -->
+          <div
+            class="social-section footer-section reveal-item"
+            style="transition-delay: 0.8s"
+          >
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="./404.html" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="./404.html" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="./404.html" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="./404.html" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section: Newsletter -->
+        <div class="footer-bottom reveal-item" style="transition-delay: 1s">
+          <h3>
+            <span style="color: var(--text-highlight)">Stay Updated</span> with
+            STACKLY
+          </h3>
+          <p>
+            Subscribe to our newsletter for exclusive offers and health tips.
+          </p>
+          <form class="newsletter-form" action="./404.html">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+
+          <!-- Copyright -->
+          <div class="copyright">
+            &copy; 2025 STACKLY Medicine Delivery. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./nav2.js"></script>
+    <script src="./footer2.js"></script>
+    <script>
+      // --- Blog Data Mockup ---
+      const allPosts = [
+        {
+          id: 1,
+          category: "Oncology",
+          title: "The Future of Cold Chain for Chemotherapy",
+          description:
+            "Exploring new technologies in thermal packaging that ensure the efficacy of sensitive oncology medications during transit.",
+          image: "file/b1.webp",
+        },
+        {
+          id: 2,
+          category: "Neurology",
+          title: "Adherence Strategies for MS Treatments",
+          description:
+            "How automated refill reminders and specialized packaging improve patient adherence for complex Multiple Sclerosis therapies.",
+          image: "file/b2.webp",
+        },
+        {
+          id: 3,
+          category: "Cardiology",
+          title: "Managing Heart Health: Never Miss a Dose",
+          description:
+            "The importance of scheduled, reliable delivery for chronic cardiac medications and hypertension management.",
+          image: "file/b3.webp",
+        },
+        {
+          id: 4,
+          category: "Orthopedics",
+          title: "Secure Delivery of Post-Op Pain Relief",
+          description:
+            "Our chain-of-custody protocols for controlled substances ensuring safe and compliant delivery of post-surgical pain medication.",
+          image: "file/b4.webp",
+        },
+        {
+          id: 5,
+          category: "Oncology",
+          title: "Navigating Insurance for Oral Cancer Meds",
+          description:
+            "A guide to understanding prior authorization and coverage for high-cost oral chemotherapy agents delivered to your home.",
+          image: "file/b5.webp",
+        },
+        {
+          id: 6,
+          category: "Neurology",
+          title: "The Rise of Telemedicine in Epilepsy Care",
+          description:
+            "How STACKLY supports the shift to remote consultations by guaranteeing timely delivery of seizure control medications.",
+          image: "hfile/b6.webp",
+        },
+        {
+          id: 7,
+          category: "Cardiology",
+          title: "Bi-Weekly Medication Sync: A Life Saver",
+          description:
+            "Synchronizing multiple cardiovascular prescriptions into one convenient, reliable bi-weekly delivery package.",
+          image: "file/b7.webp",
+        },
+        {
+          id: 8,
+          category: "Orthopedics",
+          title: "The Future of Biologics Storage at Home",
+          description:
+            "Best practices for receiving and storing temperature-sensitive biologic injections used in rheumatology and joint health.",
+          image: "file/b8.webp",
+        },
+        {
+          id: 9,
+          category: "Neurology",
+          title: "Preventing Migraine Pain with Proactive Delivery",
+          description:
+            "Ensuring patients have their acute and preventative migraine treatments before they need them with predictive delivery scheduling.",
+          image: "file/b9.webp",
+        },
+        {
+          id: 10,
+          category: "Oncology",
+          title: "Spotlight on Precision Medicine Delivery",
+          description:
+            "The logistical challenges and solutions for delivering highly personalized, targeted cancer therapy medications.",
+          image: "file/b10.webp",
+        },
+        {
+          id: 11,
+          category: "Cardiology",
+          title: "Anti-Coagulants: Safety and Education",
+          description:
+            "Essential tips and patient resources provided by STACKLY to ensure safe use and storage of blood-thinning medications.",
+          image: "file/b11.webp",
+        },
+        {
+          id: 12,
+          category: "Orthopedics",
+          title: "A Quick Guide to Osteoporosis Medication Delivery",
+          description:
+            "Information on injectables and oral medications for bone density, focusing on discreet and timely home delivery.",
+          image: "file/b12.webp",
+        },
+      ];
+
+      let currentCategory = "All";
+      let postsPerPage = 6;
+      let currentPage = 0;
+
+      const blogGrid = document.getElementById("blog-grid");
+      const loadMoreBtn = document.getElementById("load-more-btn");
+      const filterContainer = document.getElementById("category-filters");
+
+      // --- Utility Function to Create HTML for a Post ---
+      function createPostHtml(post) {
+        return `
+                <article class="blog-card reveal-item" data-category="${
+                  post.category
+                }">
+                    <img src="${post.image}" alt="Image for ${
+          post.title
+        }" class="rounded-t-xl" onerror="this.onerror=null;this.src='file/b6.webp';" loading="lazy">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-sm font-semibold mb-2" style="color: var(--secondary-color);">${post.category.toUpperCase()}</span>
+                        <h3 class="text-xl font-bold mb-3 blog-title">
+                            ${post.title}
+                        </h3>
+                        <p class="text-gray-600 mb-4">${post.description}</p>
+                        <a href="./404.html" class="read-more-btn">Read More</a>
+                    </div>
+                </article>
+            `;
+      }
+
+      // --- Filter and Render Posts ---
+      function renderPosts(category, append = false) {
+        const filteredPosts =
+          category === "All"
+            ? allPosts
+            : allPosts.filter((p) => p.category === category);
+
+        if (!append) {
+          blogGrid.innerHTML = "";
+          currentPage = 0;
+        }
+
+        const startIndex = currentPage * postsPerPage;
+        const endIndex = startIndex + postsPerPage;
+        const postsToShow = filteredPosts.slice(startIndex, endIndex);
+
+        postsToShow.forEach((post) => {
+          blogGrid.innerHTML += createPostHtml(post);
+        });
+
+        currentPage++;
+
+        // Update Load More button visibility
+        if (endIndex >= filteredPosts.length) {
+          loadMoreBtn.classList.add("hidden");
+        } else {
+          loadMoreBtn.classList.remove("hidden");
+        }
+
+        // Re-apply observer to new elements
+        initializeScrollReveal();
+      }
+
+      // --- Event Listeners ---
+
+      // Category Filter Tabs
+      filterContainer.addEventListener("click", (e) => {
+        const target = e.target;
+        if (target.classList.contains("category-tab")) {
+          // Update active tab styles
+          document
+            .querySelectorAll(".category-tab")
+            .forEach((tab) => tab.classList.remove("active"));
+          target.classList.add("active");
+
+          // Filter and render
+          currentCategory = target.dataset.category;
+          renderPosts(currentCategory, false); // Start from page 0
+        }
+      });
+
+      // Load More Button
+      loadMoreBtn.addEventListener("click", () => {
+        renderPosts(currentCategory, true); // Append new posts
+      });
+
+      // --- Scroll-to-Reveal Logic (Same as before) ---
+      let observer;
+      function initializeScrollReveal() {
+        // Remove previous observer if it exists
+        if (observer) {
+          observer.disconnect();
+        }
+
+        const revealItems = document.querySelectorAll(
+          "#blog-grid .reveal-item:not(.visible), #load-more-btn, #category-filters"
+        );
+
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
+        };
+
+        observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              obs.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        revealItems.forEach((item) => {
+          observer.observe(item);
+        });
+      }
+
+      // --- Initialization on Load ---
+      window.onload = function () {
+        // Initial render of the first page (All categories)
+        renderPosts(currentCategory, false);
+      };
+    </script>
+  </body>
+</html>

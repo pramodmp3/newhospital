@@ -1,0 +1,392 @@
+/*
+        --------------------------------------------------------
+        CSS STYLING (styles.css equivalent) - Dark Theme Applied
+        --------------------------------------------------------
+        */
+
+:root {
+  /* Branding Colors - New Dark Theme Palette */
+  --color-primary-blue: #0077ff; /* Primary accent blue */
+  --color-secondary-cyan: #00e5ff; /* Secondary bright cyan */
+  --color-dark-purple: #1a0033; /* Deep background dark */
+  --color-dark-blue: #0d1a33; /* Deep background dark blue */
+  --color-text-light: #e0f7fa; /* Light text for dark background */
+  --glass-bg: rgba(255, 255, 255, 0.1); /* Transparent glass background */
+  --glass-border: rgba(255, 255, 255, 0.3); /* Glass border */
+  --shadow-light: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 10px 40px 0 rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 15px rgba(0, 119, 255, 0.8);
+  --header-height: 4.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  /* Using the deep background color */
+  background-color: var(--color-dark-purple);
+  padding-top: var(--header-height);
+}
+
+/* --- Header & Nav Container --- */
+.header {
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  /* Using the slightly lighter dark blue for the header */
+  background-color: var(--color-dark-blue);
+  box-shadow: var(--shadow-light);
+}
+
+.navbar {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+/* Navbar Brand */
+.brand {
+  display: flex; /* Align icon and image horizontally */
+  align-items: center; /* Vertically center icon and image */
+  gap: 0.5rem; /* Space between icon and logo */
+  text-decoration: none; /* Remove underline from link */
+}
+
+.brand-logo {
+  font-size: 1.5rem; /* Size of the icon */
+  color: #fff; /* Icon color (adjust to your navbar) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo image styling */
+.brand img {
+  height: 80px; /* Adjust as needed */
+  width: auto; /* Keep aspect ratio */
+  display: block;
+}
+
+/* Optional: Hover effect for the brand */
+.brand:hover {
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+
+/* --- Main Menu (Desktop) --- */
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.nav-links > li {
+  position: relative;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--color-text-light); /* Light text on dark BG */
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Styling for the dropdown arrow icon on desktop */
+.nav-dropdown-icon {
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease-out;
+}
+
+/* Rotate the icon when the dropdown is open (i.e., when hovering the parent li) */
+.nav-links > li:hover .nav-dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* Hover Animation: Link Fade/Glass Shift */
+.nav-link:hover {
+  color: var(--color-primary-blue); /* Primary accent color on hover */
+  background-color: var(--glass-bg); /* Subtle glass background */
+  box-shadow: 0 0 5px rgba(0, 119, 255, 0.2);
+}
+
+/* --- Dropdown Menu (Desktop) --- */
+.dropdown {
+  position: absolute;
+  top: 100%; /* Position below the parent */
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  min-width: 150px;
+  background-color: var(--color-dark-blue);
+  box-shadow: var(--shadow-light);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  padding: 0.5rem 0;
+  border: 1px solid var(--glass-border); /* Added glass border */
+}
+
+.nav-links > li:hover > .dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) scale(1);
+}
+
+.dropdown a {
+  display: block;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  color: var(--color-text-light);
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.dropdown a:hover {
+  background-color: var(--color-secondary-cyan);
+  color: var(--color-dark-blue); /* Dark text on bright cyan hover */
+}
+
+/* --- Login Button --- */
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.login-btn {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 9999px; /* Pill shape */
+  /* Gradient using the new primary and secondary colors */
+  background: linear-gradient(
+    45deg,
+    var(--color-primary-blue),
+    var(--color-secondary-cyan)
+  );
+  color: var(--color-dark-blue); /* Dark text for contrast on bright button */
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 119, 255, 0.4);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Glowing/Gradient Hover Effect */
+.login-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  /* Using the new shadow glow variable */
+  box-shadow: var(--shadow-glow), var(--shadow-hover);
+  color: var(--color-text-light); /* Lighter text on hover */
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+}
+
+/* --- Mobile Hamburger Menu --- */
+.mobile-menu-toggle {
+  display: none; /* Hidden on desktop */
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1010;
+  color: var(--color-primary-blue); /* Primary accent color for icon */
+}
+
+.mobile-menu-toggle i {
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+/* --- Mobile Menu (Full Screen Drop) --- */
+.mobile-nav-menu {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  /* Dark menu background */
+  background-color: var(--color-dark-purple);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  list-style: none;
+
+  /* Center-Drop Animation */
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    opacity 0.4s ease;
+}
+
+.mobile-nav-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-menu li {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  opacity: 0; /* Staggered fade-in is handled by JS/CSS below */
+  transition: opacity 0.3s ease;
+}
+
+.mobile-nav-menu.open li {
+  opacity: 1;
+}
+
+.mobile-nav-menu .nav-link {
+  font-size: 1.25rem;
+  padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-light);
+}
+
+/* Mobile dropdown container */
+.mobile-dropdown-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Mobile Dropdown Toggle Icon */
+.mobile-dropdown-toggle {
+  background: none;
+  border: none;
+  color: var(--color-primary-blue);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.mobile-dropdown-toggle:hover {
+  background-color: var(--glass-bg);
+}
+
+/* Mobile Submenu */
+.mobile-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, background-color 0.3s;
+  background-color: var(--color-dark-blue);
+  border-radius: 0.5rem;
+  margin-top: 0.25rem;
+  text-align: center;
+}
+
+.mobile-dropdown a {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: var(--color-text-light);
+  display: block;
+}
+
+.mobile-dropdown a:hover {
+  background-color: var(--color-secondary-cyan);
+  color: var(--color-dark-blue);
+}
+
+.mobile-dropdown.open {
+  /* Max-height set by JS for smooth slide down */
+  max-height: 300px; /* A safe maximum height for smooth transition */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* --- Media Queries (Tablet and Mobile) --- */
+@media (max-width: 1024px) {
+  /* Hide desktop menu items and show mobile toggle */
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  /* Move login button inside the mobile menu on small screens */
+  .nav-actions {
+    display: none;
+  }
+
+  .mobile-nav-menu.open .login-btn-mobile {
+    display: block;
+  }
+
+  /* Hide the desktop dropdown icon on mobile */
+  .nav-dropdown-icon {
+    display: none;
+  }
+  /* Responsive tweaks */
+
+  .brand {
+    gap: 0.25rem; /* Reduce gap on small screens */
+  }
+
+  .brand img {
+    height: 50px; /* Slightly smaller logo */
+  }
+
+  .brand-logo {
+    font-size: 1.2rem; /* Slightly smaller icon */
+  }
+}
+
+/* Mobile Login Button (Inside mobile menu) */
+.login-btn-mobile {
+  display: none;
+  margin-top: 2rem;
+  max-width: 300px;
+  width: 100%;
+}
+
+/* Resetting desktop hover effect for mobile */
+@media (max-width: 1024px) {
+  .nav-links > li:hover > .dropdown {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-50%) scale(0.95);
+  }
+  .nav-link:hover {
+    background-color: transparent;
+    color: var(--color-text-light);
+  }
+}
